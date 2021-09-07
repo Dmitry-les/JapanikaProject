@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-09-07T11:45:47 IDT" name="Default suite" finished-at="2021-09-07T11:45:47 IDT" duration-ms="131">
+    <groups>
+    </groups>
+    <test started-at="2021-09-07T11:45:47 IDT" name="Default test" finished-at="2021-09-07T11:45:47 IDT" duration-ms="131">
+      <class name="Japanika.JapanikaRun">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Japanika.JapanikaRun@4313f5bc]" started-at="2021-09-07T11:45:47 IDT" name="beforeTest" finished-at="2021-09-07T11:45:47 IDT" duration-ms="30" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Japanika.JapanikaRun@4313f5bc]" started-at="2021-09-07T11:45:47 IDT" name="beforeClass" finished-at="2021-09-07T11:45:47 IDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Japanika.JapanikaRun@4313f5bc]" started-at="2021-09-07T11:45:47 IDT" name="beforeMethod" finished-at="2021-09-07T11:45:47 IDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="f()[pri:0, instance:Japanika.JapanikaRun@4313f5bc]" started-at="2021-09-07T11:45:47 IDT" name="f" finished-at="2021-09-07T11:45:47 IDT" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Japanika.JapanikaRun@4313f5bc]" started-at="2021-09-07T11:45:47 IDT" name="afterMethod" finished-at="2021-09-07T11:45:47 IDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Japanika.JapanikaRun@4313f5bc]" started-at="2021-09-07T11:45:47 IDT" name="afterClass" finished-at="2021-09-07T11:45:47 IDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:Japanika.JapanikaRun@4313f5bc]" started-at="2021-09-07T11:45:47 IDT" name="afterTest" finished-at="2021-09-07T11:45:47 IDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- Japanika.JapanikaRun -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
