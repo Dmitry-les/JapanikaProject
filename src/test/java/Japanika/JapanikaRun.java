@@ -5,6 +5,8 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
+import Identification.idChat;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
@@ -19,10 +21,10 @@ import org.openqa.selenium.support.PageFactory;
 public class JapanikaRun {
 	
 	static WebDriver driver;
-	static PomJapanika pom;
+	static idChat pom;
 	static ExtentManager Jap = new ExtentManager(driver);
 	static ExtentReports extent;
-	static ExtentTest test1;
+	static ExtentTest test;
 
 	
   @BeforeClass
@@ -35,11 +37,11 @@ public class JapanikaRun {
 		driver.get("https://www.japanika.net/");
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
 		
-		pom = new PomJapanika();
-		pom = PageFactory.initElements(driver, PomJapanika.class);
+		pom = new idChat();
+		pom = PageFactory.initElements(driver, idChat.class);
 		
 		extent = Jap.GetExtent();
-		test1 = Jap.createTest("test1", "ChatOnLine");
+		test = Jap.createTest("test1", "ChatOnLine");
   }
 
   @AfterClass
@@ -50,22 +52,21 @@ public class JapanikaRun {
   @Test
   public void test1() throws InterruptedException {
 	  
-	  pom.ChatOnLine.click();
+//	  pom.ChatOnLine.click();
 
 	  driver.findElement(By.className("intercom-launcher")).click();
 
-	  driver.switchTo().frame(driver.findElement(By.xpath("//*[@id=\"intercom-container\"]/div/div[1]/iframe")));
-  
+//	  driver.switchTo().frame(driver.findElement(By.xpath("//*[@id=\"intercom-container\"]/div/div[1]/iframe")));
+  try {
 	  driver.findElement(By.xpath("//*[@class=\"intercom-messenger-frame intercom-501b9j e52psle0 intercom-messenger-frame-enter-done\"]"));
-	  
-	  Thread.sleep(2000);
-
-	  driver.switchTo().defaultContent();
+		System.out.println("pass");
 
 	  
-	  
-	  
-	  
+} catch (Exception e) {
+		System.out.println("faild");
+		Thread.sleep(2000);
+
+}
 
 //	  if (driver.getTitle().equals("בית - Japanika")) {
 //		  test1.fail("ChatOnLine - test fail");	
