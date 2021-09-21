@@ -80,7 +80,7 @@ public class ExtentManager {
 //		Robot robot = new Robot();
 //		BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
 //		ImageIO.write(screenShot, "JPG", new File(ImagesPath));
-//		
+		
 		
 		return imagePath;
 	}

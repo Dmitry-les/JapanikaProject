@@ -11,6 +11,7 @@ import org.testng.annotations.AfterClass;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Ignore;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -22,9 +23,7 @@ public class JapanikaRun {
 	static ExtentManager Jap = new ExtentManager(driver);
 	static ExtentReports extent;
 	static ExtentTest test1;
-//	static ExtentTest test2;
-//	static ExtentTest test3;
-//	static ExtentTest test4;
+
 	
   @BeforeClass
   public static void beforeClass() {
@@ -46,22 +45,35 @@ public class JapanikaRun {
   @AfterClass
   public static void afterClass() {
 		extent.flush();
-		driver.quit();
+//		driver.quit();
   }
-  @Ignore
   @Test
   public void test1() throws InterruptedException {
-	  pom.ChatOnLine.click();
 	  
-	  System.out.println(driver.getTitle());	
+	  pom.ChatOnLine.click();
 
-	  if (driver.getTitle().equals("בית - Japanika")) {
-		  test1.fail("ChatOnLine - test fail");	
-	  }else {
-		  test1.pass("ChatOnLine - test pass");
-	  }
+	  driver.findElement(By.className("intercom-launcher")).click();
+
+	  driver.switchTo().frame(driver.findElement(By.xpath("//*[@id=\"intercom-container\"]/div/div[1]/iframe")));
+  
+	  driver.findElement(By.xpath("//*[@class=\"intercom-messenger-frame intercom-501b9j e52psle0 intercom-messenger-frame-enter-done\"]"));
+	  
 	  Thread.sleep(2000);
-	 
+
+	  driver.switchTo().defaultContent();
+
+	  
+	  
+	  
+	  
+
+//	  if (driver.getTitle().equals("בית - Japanika")) {
+//		  test1.fail("ChatOnLine - test fail");	
+//	  }else {
+//		  test1.pass("ChatOnLine - test pass");
+//	  }
+//	  Thread.sleep(2000);
+//	 
 	  
   }
   
