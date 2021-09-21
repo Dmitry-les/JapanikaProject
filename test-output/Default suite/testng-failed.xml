@@ -5,9 +5,7 @@
     <classes>
       <class name="Japanika.JapanikaRun">
         <methods>
-          <include name="afterClass"/>
           <include name="test1"/>
-          <include name="beforeClass"/>
         </methods>
       </class> <!-- Japanika.JapanikaRun -->
     </classes>

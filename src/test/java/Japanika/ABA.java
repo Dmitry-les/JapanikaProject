@@ -1,5 +1,14 @@
 package Japanika;
 
-public class ABA {
+import org.openqa.selenium.WebDriver;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import Identification.idChat;
 
+public class ABA {
+	public static WebDriver driver;
+	public static idChat pom;
+	public static ExtentManager Jap = new ExtentManager(driver);
+	public static ExtentReports extent;
+	public static ExtentTest test;
 }
