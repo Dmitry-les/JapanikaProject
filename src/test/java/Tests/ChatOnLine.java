@@ -2,7 +2,6 @@ package Tests;
 
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
@@ -24,11 +23,11 @@ public class ChatOnLine extends ABA {
 		driver.get("https://www.japanika.net/");
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
 		
-		pom = new idChat();
-		pom = PageFactory.initElements(driver, idChat.class);
+		pom1 = new idChat();
+		pom1 = PageFactory.initElements(driver, idChat.class);
 		
 		extent = Jap.GetExtent();
-		test = Jap.createTest("test1", "ChatOnLine");
+		test1 = Jap.createTest("Test1", "ChatOnLine");
 	}
 	@AfterClass
 	public static void afterClass() throws InterruptedException {
@@ -36,23 +35,24 @@ public class ChatOnLine extends ABA {
 		extent.flush();
 		driver.quit();
 	}
+
 	@Test
 	public static void ChatOnLineTest(){
 
-//		pom.BtnChatOnLine.click();   // יכשל טסט
-		pom.BtnChat.click();         // יצליח טסט
+//		pom.BtnChatOnLine.click();   // יכשל טסט 
+		pom1.BtnChat.click();         // יצליח טסט
 //		func.IdentifyChat(test, "PASS", "FAIL");
 
 		try {
-			pom.ChatWindow.isEnabled();
-			test.pass("test " + "ChatOnLine"+ " pass");
+			pom1.ChatWindow.isEnabled();
+			test1.pass("test " + "ChatOnLine"+ " pass");
 //			test.pass("test " + pom.TitleChat.getAttribute("alt")+ " pass");   // עברית קורא לא
-			System.out.println("test " + pom.TitleChat.getAttribute("alt") + " psss");
+			System.out.println("test " + pom1.TitleChat.getAttribute("alt") + " psss");
 
 		}catch (Exception e) {
-			test.fail("test " + "ChatOnLine"+ " fail");
+			test1.fail("test " + "ChatOnLine"+ " fail");
 //			test.pass("test " + pom.TitleChat.getAttribute("alt")+ " faild");   // עברית קורא לא
-			System.out.println("test " + pom.TitleChat.getAttribute("alt") + " fail");
+			System.out.println("test " + pom1.TitleChat.getAttribute("alt") + " fail");
 		}
 	}
 }
