@@ -8,6 +8,7 @@ import Identification.idChat;
 public class ABA {
 	public static WebDriver driver;
 	public static idChat pom;
+	public static Functions func;
 	public static ExtentManager Jap = new ExtentManager(driver);
 	public static ExtentReports extent;
 	public static ExtentTest test;

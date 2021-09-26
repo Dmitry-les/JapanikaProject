@@ -31,6 +31,7 @@ public class ExtentManager {
 	private static ExtentTest test;
 	private static ExtentSparkReporter htmlReporter;
 		
+	
 	static DateFormat df = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
 	static Date today = Calendar.getInstance().getTime(); 
 	static String reportDate = df.format(today);

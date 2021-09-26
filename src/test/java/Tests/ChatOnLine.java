@@ -29,29 +29,30 @@ public class ChatOnLine extends ABA {
 		
 		extent = Jap.GetExtent();
 		test = Jap.createTest("test1", "ChatOnLine");
-	 }
-
+	}
 	@AfterClass
 	public static void afterClass() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		extent.flush();
 		driver.quit();
 	}
 	@Test
-	public static void ChatOnLineTest() throws InterruptedException {
-		  
-		pom.BtnChatOnLine.click();
-//		pom.BtnChat.click();
-		Thread.sleep(2000);
+	public static void ChatOnLineTest(){
 
-	  try {
-		  	driver.findElement(By.xpath("//*[@id=\"intercom-container\"]/div/div[1]/iframe"));
-		  
-			System.out.println("pass");
+//		pom.BtnChatOnLine.click();   // יכשל טסט
+		pom.BtnChat.click();         // יצליח טסט
+//		func.IdentifyChat(test, "PASS", "FAIL");
 
-	} catch (Exception e) {
-			System.out.println("faild");
+		try {
+			pom.ChatWindow.isEnabled();
+			test.pass("test " + "ChatOnLine"+ " pass");
+//			test.pass("test " + pom.TitleChat.getAttribute("alt")+ " pass");   // עברית קורא לא
+			System.out.println("test " + pom.TitleChat.getAttribute("alt") + " psss");
+
+		}catch (Exception e) {
+			test.fail("test " + "ChatOnLine"+ " fail");
+//			test.pass("test " + pom.TitleChat.getAttribute("alt")+ " faild");   // עברית קורא לא
+			System.out.println("test " + pom.TitleChat.getAttribute("alt") + " fail");
+		}
 	}
-	
-  }
 }

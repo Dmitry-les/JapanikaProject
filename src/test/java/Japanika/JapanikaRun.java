@@ -2,28 +2,13 @@ package Japanika;
 
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-
-import Identification.idChat;
 import Tests.ChatOnLine;
-
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.AfterClass;
-
-import java.util.concurrent.TimeUnit;
-
-import org.junit.Ignore;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.PageFactory;
 
 public class JapanikaRun extends ABA {
 	
 	 @Test
-	 public void test1() throws InterruptedException {
-		 ChatOnLine.ChatOnLineTest();
+	 public void test1() {
+			ChatOnLine.ChatOnLineTest();
 	 }
 }
 	
