@@ -8,6 +8,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentTest;
+
 import Identification.idChat;
 import Identification.idHomeDelivery;
 import Japanika.ABA;
@@ -40,19 +42,9 @@ public class HomeDelivery extends ABA {
 
 	@Test
 	public static void CityNotValidTest(){
-	
 		pom2.btnOrders.click();
 		pom2.CityField.click();
-		
-		if (pom2.AlertCity.getText().equals("הקלד לפחות 2 תווים ונווט עם חיצי המקלדת")) {
-			pom2.InputField.sendKeys("א");
-			if (pom2.AlertCity.getText().equals("הקלד לפחות 2 תווים ונווט עם חיצי המקלדת")) {
-				test2.pass("test CityNotValid pass");
-			} else {
-				test2.fail("test CityNotValid fail");
-			}
-		} else {
-			System.out.println("טסט נפל בלחיצה על שדה עיר");
-		}	
-	}
+		func.HomeDelivery(test2," CityNotValid ", "הקלד לפחות 2 תווים ונווט עם חיצי המקלדת");
+	}	
 }
+

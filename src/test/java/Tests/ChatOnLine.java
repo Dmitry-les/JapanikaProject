@@ -41,18 +41,7 @@ public class ChatOnLine extends ABA {
 
 //		pom.BtnChatOnLine.click();   // יכשל טסט 
 		pom1.BtnChat.click();         // יצליח טסט
-//		func.IdentifyChat(test, "PASS", "FAIL");
+		func.IdentifyChat(test1, " ChatOnLine ");
 
-		try {
-			pom1.ChatWindow.isEnabled();
-			test1.pass("test " + "ChatOnLine"+ " pass");
-//			test.pass("test " + pom.TitleChat.getAttribute("alt")+ " pass");   // עברית קורא לא
-			System.out.println("test " + pom1.TitleChat.getAttribute("alt") + " psss");
-
-		}catch (Exception e) {
-			test1.fail("test " + "ChatOnLine"+ " fail");
-//			test.pass("test " + pom.TitleChat.getAttribute("alt")+ " faild");   // עברית קורא לא
-			System.out.println("test " + pom1.TitleChat.getAttribute("alt") + " fail");
-		}
 	}
 }
