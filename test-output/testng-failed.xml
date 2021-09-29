@@ -5,8 +5,8 @@
     <classes>
       <class name="Tests.HomeDelivery">
         <methods>
+          <include name="CityValidTest"/>
           <include name="beforeClass"/>
-          <include name="CityNotValidTest"/>
           <include name="afterClass"/>
         </methods>
       </class> <!-- Tests.HomeDelivery -->
