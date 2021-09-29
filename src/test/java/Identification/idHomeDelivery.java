@@ -1,5 +1,7 @@
 package Identification;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -20,15 +22,20 @@ public class idHomeDelivery {
 	@FindBy (xpath = "//*[@id=\"select2-autocomplete_city-results\"]/li")
 	public static WebElement AlertCity;
 
-	@FindBy (xpath = "")
-	public static WebElement Ale;
-
-	@FindBy (xpath = "")
-	public static WebElement i;
+	@FindBy(className = "select-item")
+	public static List<WebElement> City;
 	
-	@FindBy (xpath = "")
-	public static WebElement s;
+	@FindBy(className = "select-item")
+	public static List<WebElement> Street;
+	
+	@FindBy (id = "house_number")
+	public static WebElement HouseNumber;
+	
+	@FindBy (id = "approve")
+	public static WebElement Approve;
+	
+	@FindBy (className = "cat-label")
+	public static List<WebElement> Category;
 	
 	
-	//*[@id="select2-autocomplete_city-results"]/li
 }

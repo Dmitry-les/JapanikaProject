@@ -22,7 +22,7 @@ public class Functions extends ABA {
 		
 	}
 	
-	public static void HomeDelivery (ExtentTest test,String testName, String MyAlertName){
+	public static void HomeDeliveryNotValid (ExtentTest test,String testName, String MyAlertName){
 
 		if (pom2.AlertCity.getText().equals(MyAlertName)) {
 			pom2.InputField.sendKeys("א");
@@ -36,6 +36,17 @@ public class Functions extends ABA {
 		} else {
 			test2.fail("test" + testName + "fail");
 			System.out.println("טסט נפל בלחיצה על שדה עיר");
+		}
+	}
+	
+	public static void HomeDeliveryValid (ExtentTest test,String testName, String x, String y){
+
+		if (x.equals(y)) {
+			test3.pass("test" + testName + "pass");
+			System.out.println("test" + testName + "pass");
+		} else {
+			test3.fail("test" + testName + "fail");
+			System.out.println("test" + testName + "fail");
 		}
 	}
 }
