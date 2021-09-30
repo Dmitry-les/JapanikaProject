@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
@@ -41,9 +42,13 @@ public class HomeDelivery extends ABA {
 	public void afterClass() throws InterruptedException {
 		Thread.sleep(1000);
 		extent.flush();
+//		driver.quit();
+	}
+	@AfterTest
+	public void afterTest() {
 		driver.quit();
 	}
-
+	
 	@Test (enabled= false) 
 	public static void CityNotValidTest(){
 		pom2.btnOrders.click();
@@ -56,10 +61,10 @@ public class HomeDelivery extends ABA {
 		pom2.btnOrders.click();
 		pom2.CityField.click();
 		pom2.InputField.sendKeys("אש");  // עיר
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		pom2.City.get(0).click();
 		pom2.InputField.sendKeys("קו");   // רחוב
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		pom2.Street.get(0).click();
 		pom2.HouseNumber.sendKeys("5");   // בית מספר
 		pom2.Approve.click();	
