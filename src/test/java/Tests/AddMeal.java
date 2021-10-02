@@ -37,15 +37,13 @@ public class AddMeal extends ABA {
 	  extent.flush();
 	  driver.quit();
   }
-	
-  @AfterTest
-  public void afterTest() {
-  }
-  
-  @Test (enabled= true, dependsOnMethods = {"HomeDelivery.CityValidTest"}) 
+
+  @Test (enabled= false, alwaysRun=true, groups = "CityValid") 
   public void AddMeal_1 () {
 	  pom4.Category.get(0).click();
-	  pom4.Meal.get(12).click();
+	  pom4.Meal.click();
+	  pom4.Drink.click();
+	  pom4.AddToCart.click();
 	  
   }
 }

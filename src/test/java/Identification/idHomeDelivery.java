@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class idHomeDelivery {
-
+	
 	@FindBy (xpath = "//*[@id=\"menu-item-4363\"]/a")
 	public static WebElement btnOrders;
 	
@@ -36,6 +36,8 @@ public class idHomeDelivery {
 	
 	@FindBy (className = "cat-label")
 	public static List<WebElement> Category;
+	
+	
 	
 	
 }

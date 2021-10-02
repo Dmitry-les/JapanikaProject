@@ -1,0 +1,14 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testing Japanika">
+<test name="test1">
+	<classes>
+		<class name="Tests.ChatOnLine"/>
+	</classes>
+</test> 
+<test name="test2+test3">
+	<classes>
+		<class name="Tests.HomeDelivery"/>
+    </classes>
+</test> 
+</suite>

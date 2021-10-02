@@ -20,6 +20,4 @@ public class ABA {
 	public static ExtentTest test2;
 	public static ExtentTest test3;
 	public static ExtentTest test4;
-
-
 }

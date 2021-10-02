@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" > 
+<suite name="Japanika Tests"> 
+<test name="Test4"> 
+<classes> 
+   	<class name="Tests.HomeDelivery"/>
+</classes> 
+</test> 
+</suite>

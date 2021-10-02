@@ -5,7 +5,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import Identification.idChat;
@@ -35,12 +37,11 @@ public class ChatOnLine extends ABA {
 		extent.flush();
 		driver.quit();
 	}
-
+	
 	@Test
 	public static void ChatOnLineTest(){
-
-//		pom.BtnChatOnLine.click();   // יכשל טסט 
-		pom1.BtnChat.click();         // יצליח טסט
+		pom1.BtnChatOnLine.click();   // יכשל טסט 
+//		pom1.BtnChat.click();         // יצליח טסט
 		func.IdentifyChat(test1, " ChatOnLine ");
 
 	}

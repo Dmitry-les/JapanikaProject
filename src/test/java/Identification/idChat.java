@@ -8,8 +8,8 @@ package Identification;
 
 public class idChat {
 		
-//		@FindBy (xpath = "//*[@id=\"home-ui\"]/div[3]/a")
-//		public static WebElement BtnChatOnLine;
+		@FindBy (xpath = "//*[@id=\"home-ui\"]/div[3]/a")
+		public static WebElement BtnChatOnLine;
 		
 		@FindBy (xpath = "//*[@id=\"home-ui\"]/div[3]/a/img")
 		public static WebElement TitleChat;

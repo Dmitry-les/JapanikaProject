@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-09-30T20:41:14 IDT" name="Default suite" finished-at="2021-09-30T20:41:34 IDT" duration-ms="19186">
+  <suite started-at="2021-10-02T22:02:16 IDT" name="Japanika Tests" finished-at="2021-10-02T22:02:38 IDT" duration-ms="22367">
     <groups>
     </groups>
-    <test started-at="2021-09-30T20:41:14 IDT" name="Default test" finished-at="2021-09-30T20:41:34 IDT" duration-ms="19186">
+    <test started-at="2021-10-02T22:02:16 IDT" name="Test4" finished-at="2021-10-02T22:02:38 IDT" duration-ms="22367">
       <class name="Tests.HomeDelivery">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Tests.HomeDelivery@15eb5ee5]" started-at="2021-09-30T20:41:14 IDT" name="beforeClass" finished-at="2021-09-30T20:41:20 IDT" duration-ms="6047" status="PASS">
+        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Tests.HomeDelivery@15eb5ee5]" started-at="2021-10-02T22:02:16 IDT" name="BeforeClass" finished-at="2021-10-02T22:02:22 IDT" duration-ms="5962" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method signature="CityValidTest()[pri:0, instance:Tests.HomeDelivery@15eb5ee5]" started-at="2021-09-30T20:41:20 IDT" name="CityValidTest" finished-at="2021-09-30T20:41:32 IDT" duration-ms="11133" status="PASS">
+        </test-method> <!-- BeforeClass -->
+        <test-method signature="CityValidTest()[pri:3, instance:Tests.HomeDelivery@15eb5ee5]" started-at="2021-10-02T22:02:22 IDT" name="CityValidTest" finished-at="2021-10-02T22:02:34 IDT" duration-ms="12404" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CityValidTest -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:Tests.HomeDelivery@15eb5ee5]" started-at="2021-09-30T20:41:32 IDT" name="afterClass" finished-at="2021-09-30T20:41:33 IDT" duration-ms="1520" status="PASS">
+        <test-method signature="AddMeal_1()[pri:2, instance:Tests.HomeDelivery@15eb5ee5]" started-at="2021-10-02T22:02:34 IDT" name="AddMeal_1" finished-at="2021-10-02T22:02:36 IDT" depends-on-methods="Tests.HomeDelivery.CityValidTest" duration-ms="2097" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddMeal_1 -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Tests.HomeDelivery@15eb5ee5]" started-at="2021-10-02T22:02:36 IDT" name="afterClass" finished-at="2021-10-02T22:02:38 IDT" duration-ms="1827" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:Tests.HomeDelivery@15eb5ee5]" started-at="2021-09-30T20:41:33 IDT" name="afterTest" finished-at="2021-09-30T20:41:34 IDT" duration-ms="419" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
       </class> <!-- Tests.HomeDelivery -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test4 -->
+  </suite> <!-- Japanika Tests -->
 </testng-results>

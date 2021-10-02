@@ -19,7 +19,6 @@ public class Functions extends ABA {
 //			test.pass("test " + pom.TitleChat.getAttribute("alt")+ " faild");   // עברית קורא לא
 			System.out.println("test " + pom1.TitleChat.getAttribute("alt") + " fail");
 		}
-		
 	}
 	
 	public static void HomeDeliveryNotValid (ExtentTest test,String testName, String MyAlertName){
@@ -39,7 +38,7 @@ public class Functions extends ABA {
 		}
 	}
 	
-	public static void HomeDeliveryValid (ExtentTest test,String testName, String x, String y){
+	public static void CompareValue (ExtentTest test, String testName, String x, String y){
 
 		if (x.equals(y)) {
 			test3.pass("test" + testName + "pass");
