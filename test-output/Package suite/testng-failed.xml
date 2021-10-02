@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Package suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="First Test(failed)">
+    <classes>
+      <class name="Tests.AddMeal">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="AddMeal_1"/>
+        </methods>
+      </class> <!-- Tests.AddMeal -->
+      <class name="Tests.HomeDelivery">
+        <methods>
+          <include name="CityValidTest"/>
+          <include name="BeforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- Tests.HomeDelivery -->
+    </classes>
+  </test> <!-- First Test(failed) -->
+</suite> <!-- Failed suite [Package suite] -->
