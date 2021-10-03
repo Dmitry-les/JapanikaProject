@@ -2,17 +2,13 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Japanika Tests]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test4(failed)">
-    <groups>
-      <run>
-        <include name="CityValid"/>
-      </run>
-    </groups>
     <classes>
       <class name="Tests.HomeDelivery">
         <methods>
           <include name="CityValidTest"/>
-          <include name="AddMeal_1"/>
+          <include name="BeforeClass"/>
           <include name="afterClass"/>
+          <include name="AddMeal_1Test"/>
         </methods>
       </class> <!-- Tests.HomeDelivery -->
     </classes>
