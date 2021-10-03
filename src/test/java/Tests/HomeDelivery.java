@@ -1,5 +1,6 @@
 package Tests;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.fail;
 
 import java.util.concurrent.TimeUnit;
@@ -41,26 +42,24 @@ public class HomeDelivery extends ABA {
 		extent = Jap.GetExtent();
 		test2 = Jap.createTest("Test2", "CityNotValid");
 		test3 = Jap.createTest("Test3", "CityValid");
-		test4 = Jap.createTest("Test4", "AddMeal");
-
-
+		test4 = Jap.createTest("Test4", "AddMeal_1");
+		test5 = Jap.createTest("Test5", "AddMeal_2");
 	}
 	@AfterClass(alwaysRun=true)
 	public void afterClass() throws InterruptedException {
 		Thread.sleep(1000);
 		extent.flush();
-		driver.quit();
+//		driver.quit();
 	}
 	
 	@Test (enabled= false, priority = 1) 
 	public static void CityNotValidTest(){
-		driver.get("https://www.japanika.net/");
 		pom2.btnOrders.click();
 		pom2.CityField.click();
 		func.HomeDeliveryNotValid(test2," CityNotValid ", "הקלד לפחות 2 תווים ונווט עם חיצי המקלדת");
 	}
 
-	@Test (enabled= true, priority = 3) 
+	@Test (enabled= true, priority = 2) 
 	public static void CityValidTest() throws InterruptedException{
 		driver.get("https://www.japanika.net/");
 		pom2.btnOrders.click();
@@ -71,21 +70,39 @@ public class HomeDelivery extends ABA {
 		pom2.InputField.sendKeys("קו");   // רחוב
 		Thread.sleep(2000);
 		pom2.Street.get(0).click();
+	
 		pom2.HouseNumber.sendKeys("5");   // בית מספר
 		pom2.Approve.click();
 		Thread.sleep(3000);
-		func.CompareValue(test3," CityValid ", pom2.Category.get(1).getText() , "המבצעי שלנו");
+		func.CompareValue(test3," CityValid ", pom2.Category.get(0).getText() , "יש לי קופון");
 	}
 	
-	@Test (enabled= true, priority = 2, 
-			dependsOnMethods = {"CityValidTest"}) 
-	public void AddMeal_1 () {
-		pom4.Category.get(7).click();
-		pom4.Meal.click();
+	@Test (enabled= true, priority = 3,
+			dependsOnMethods = {"CityValidTest"}, alwaysRun = true) 
+	public void AddMeal_1Test () {
+//		Select mySelection = new Select(pom4.Category);
+//		mySelection.selectByVisibleText("בהרכבה סושי");
+//		System.out.println(mySelection);
+		pom4.Category.get(6).click();
+		pom4.Meal1.click();
 		pom4.Drink.click();
 		pom4.AddToCart.click();
-		func.CompareValue(test4," AddMeal_1 ", pom4.ChosenMeal.get(0).getText(), pom4.Meal.getText());  
+		func.CompareValue(test4," AddMeal_1Test ", pom4.ChosenMeal.get(0).getText(), pom4.Meal1.getText());  
 	  }
-}	
+	
+	@Test (enabled = true, priority = 4,
+			dependsOnMethods = {"AddMeal_1Test"}) 
+	public void AddMeal_2Test () {
+		pom4.Category.get(2).click();
+		pom4.Meal2.click();
+		pom4.Gluten.get(1).click();
+		pom4.AddToCart.click();
+		System.out.println(pom4.ChosenMeal.get(1).getText());  //   get (???)
+		System.out.println(pom4.Meal2.getText());
+
+		func.CompareValue(test5," AddMeal_2 ", pom4.ChosenMeal.get(1).getText(), pom4.Meal2.getText());  
+	  }
+	
+}
 
 

@@ -16,6 +16,7 @@ import org.testng.annotations.AfterTest;
 
 public class AddMeal extends ABA {
 
+
   @BeforeClass
   public void beforeClass() {
 	  System.setProperty("webdriver.chrome.driver","C:\\Users\\User\\Desktop\\Dima//chromedriver.exe");
@@ -41,7 +42,7 @@ public class AddMeal extends ABA {
   @Test (enabled= false, alwaysRun=true, groups = "CityValid") 
   public void AddMeal_1 () {
 	  pom4.Category.get(0).click();
-	  pom4.Meal.click();
+	  pom4.Meal1.click();
 	  pom4.Drink.click();
 	  pom4.AddToCart.click();
 	  

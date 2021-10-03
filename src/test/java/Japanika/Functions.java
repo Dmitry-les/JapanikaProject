@@ -41,10 +41,10 @@ public class Functions extends ABA {
 	public static void CompareValue (ExtentTest test, String testName, String x, String y){
 
 		if (x.equals(y)) {
-			test3.pass("test" + testName + "pass");
+			test.pass("test" + testName + "pass");
 			System.out.println("test" + testName + "pass");
 		} else {
-			test3.fail("test" + testName + "fail");
+			test.fail("test" + testName + "fail");
 			System.out.println("test" + testName + "fail");
 		}
 	}

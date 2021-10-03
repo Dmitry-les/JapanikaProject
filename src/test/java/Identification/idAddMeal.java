@@ -12,7 +12,7 @@ public class idAddMeal {
 	public static List<WebElement> Category;
 	
 	@FindBy (xpath = "//*[@id=\"products-wrapper\"]//*[contains(text(),'ארוחת פרש נודלס קידס עוף')]")
-	public static WebElement Meal;
+	public static WebElement Meal1;
 	
 	@FindBy (xpath = "//*[@id=\"component_1164273\"]//*[contains(text(),'ספרייט אישי')]")
 	public static WebElement Drink;
@@ -22,5 +22,13 @@ public class idAddMeal {
 	
 	@FindBy (xpath = "//*[@class=\"cart-item\"]/h4")
 	public static List<WebElement> ChosenMeal;
+	
+	@FindBy (xpath = "//*[@id=\"products-wrapper\"]//*[contains(text(),'אדממה')]")
+	public static WebElement Meal2;
+	
+	@FindBy (className = "cb_label")
+	public static List<WebElement> Gluten;
+	
+	
 	
 }
