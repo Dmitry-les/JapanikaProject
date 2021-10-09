@@ -1,78 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="3" failed="2" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-05T21:39:40 IDT" name="Testing Japanika" finished-at="2021-10-05T21:40:25 IDT" duration-ms="45445">
+  <suite started-at="2021-10-09T14:42:27 IDT" name="Default suite" finished-at="2021-10-09T14:42:54 IDT" duration-ms="27145">
     <groups>
     </groups>
-    <test started-at="2021-10-05T21:39:40 IDT" name="test1" finished-at="2021-10-05T21:39:58 IDT" duration-ms="18854">
-      <class name="Tests.ChatOnLine">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Tests.ChatOnLine@41e36e46]" started-at="2021-10-05T21:39:40 IDT" name="beforeClass" finished-at="2021-10-05T21:39:46 IDT" duration-ms="5917" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method signature="ChatOnLineTest()[pri:0, instance:Tests.ChatOnLine@41e36e46]" started-at="2021-10-05T21:39:46 IDT" name="ChatOnLineTest" finished-at="2021-10-05T21:39:57 IDT" duration-ms="10965" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [2] but found [1]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [2] but found [1]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at org.testng.Assert.assertEquals(Assert.java:639)
-at Japanika.Functions.IdentifyChat(Functions.java:21)
-at Tests.ChatOnLine.ChatOnLineTest(ChatOnLine.java:45)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ChatOnLineTest -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:Tests.ChatOnLine@41e36e46]" started-at="2021-10-05T21:39:57 IDT" name="afterClass" finished-at="2021-10-05T21:39:58 IDT" duration-ms="1902" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- Tests.ChatOnLine -->
-    </test> <!-- test1 -->
-    <test started-at="2021-10-05T21:39:58 IDT" name="test2+test3" finished-at="2021-10-05T21:40:25 IDT" duration-ms="26551">
+    <test started-at="2021-10-09T14:42:27 IDT" name="Default test" finished-at="2021-10-09T14:42:54 IDT" duration-ms="27145">
       <class name="Tests.HomeDelivery">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Tests.HomeDelivery@62150f9e]" started-at="2021-10-05T21:39:59 IDT" name="BeforeClass" finished-at="2021-10-05T21:40:03 IDT" duration-ms="4531" status="PASS">
+        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Tests.HomeDelivery@39529185]" started-at="2021-10-09T14:42:27 IDT" name="BeforeClass" finished-at="2021-10-09T14:42:32 IDT" duration-ms="5757" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method signature="CityNotValidTest()[pri:1, instance:Tests.HomeDelivery@62150f9e]" started-at="2021-10-05T21:40:03 IDT" name="CityNotValidTest" finished-at="2021-10-05T21:40:04 IDT" duration-ms="575" status="FAIL">
+        <test-method signature="CityNotValidTest()[pri:1, instance:Tests.HomeDelivery@39529185]" started-at="2021-10-09T14:42:32 IDT" name="CityNotValidTest" finished-at="2021-10-09T14:42:33 IDT" duration-ms="483" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [2] but found [1]]]>
@@ -85,8 +24,8 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 at org.testng.Assert.assertEquals(Assert.java:122)
 at org.testng.Assert.assertEquals(Assert.java:629)
 at org.testng.Assert.assertEquals(Assert.java:639)
-at Japanika.Functions.HomeDeliveryNotValid(Functions.java:36)
-at Tests.HomeDelivery.CityNotValidTest(HomeDelivery.java:63)
+at Japanika.Functions.HomeDeliveryNotValid(Functions.java:38)
+at Tests.HomeDelivery.CityNotValidTest(HomeDelivery.java:64)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -121,23 +60,23 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CityNotValidTest -->
-        <test-method signature="CityValidTest()[pri:2, instance:Tests.HomeDelivery@62150f9e]" started-at="2021-10-05T21:40:04 IDT" name="CityValidTest" finished-at="2021-10-05T21:40:16 IDT" duration-ms="12814" status="PASS">
+        <test-method signature="CityValidTest()[pri:2, instance:Tests.HomeDelivery@39529185]" started-at="2021-10-09T14:42:33 IDT" name="CityValidTest" finished-at="2021-10-09T14:42:45 IDT" duration-ms="11802" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CityValidTest -->
-        <test-method signature="AddMeal_1Test()[pri:3, instance:Tests.HomeDelivery@62150f9e]" started-at="2021-10-05T21:40:16 IDT" name="AddMeal_1Test" finished-at="2021-10-05T21:40:20 IDT" depends-on-methods="Tests.HomeDelivery.CityValidTest" duration-ms="3962" status="PASS">
+        <test-method signature="AddMeal_1Test()[pri:3, instance:Tests.HomeDelivery@39529185]" started-at="2021-10-09T14:42:45 IDT" name="AddMeal_1Test" finished-at="2021-10-09T14:42:49 IDT" depends-on-methods="Tests.HomeDelivery.CityValidTest" duration-ms="3899" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddMeal_1Test -->
-        <test-method signature="AddMeal_2Test()[pri:4, instance:Tests.HomeDelivery@62150f9e]" started-at="2021-10-05T21:40:20 IDT" name="AddMeal_2Test" finished-at="2021-10-05T21:40:24 IDT" depends-on-methods="Tests.HomeDelivery.AddMeal_1Test" duration-ms="3598" status="PASS">
+        <test-method signature="AddMeal_2Test()[pri:4, instance:Tests.HomeDelivery@39529185]" started-at="2021-10-09T14:42:49 IDT" name="AddMeal_2Test" finished-at="2021-10-09T14:42:52 IDT" depends-on-methods="Tests.HomeDelivery.AddMeal_1Test" duration-ms="3644" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddMeal_2Test -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:Tests.HomeDelivery@62150f9e]" started-at="2021-10-05T21:40:24 IDT" name="afterClass" finished-at="2021-10-05T21:40:25 IDT" duration-ms="1054" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Tests.HomeDelivery@39529185]" started-at="2021-10-09T14:42:52 IDT" name="afterClass" finished-at="2021-10-09T14:42:54 IDT" duration-ms="1498" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- Tests.HomeDelivery -->
-    </test> <!-- test2+test3 -->
-  </suite> <!-- Testing Japanika -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

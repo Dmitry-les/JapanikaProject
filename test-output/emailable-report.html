@@ -8,26 +8,51 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Testing Japanika</th></tr>
-<tr><td><a href="#t0">test1</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">18,854</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">test2+test3</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">26,551</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">3</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">45,405</th><th colspan="2"></th></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">27,145</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Testing Japanika</th></tr></tbody><tbody id="t0"><tr><th colspan="4">test1 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Tests.ChatOnLine</td><td><a href="#m0">ChatOnLineTest</a></td><td rowspan="1">1633459186080</td><td rowspan="1">10965</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">test2+test3 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Tests.HomeDelivery</td><td><a href="#m1">CityNotValidTest</a></td><td rowspan="1">1633459203535</td><td rowspan="1">575</td></tr><tr><th colspan="4">test2+test3 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">Tests.HomeDelivery</td><td><a href="#m2">AddMeal_1Test</a></td><td rowspan="1">1633459216931</td><td rowspan="1">3962</td></tr><tr class="passedeven"><td><a href="#m3">AddMeal_2Test</a></td><td rowspan="1">1633459220896</td><td rowspan="1">3598</td></tr><tr class="passedeven"><td><a href="#m4">CityValidTest</a></td><td rowspan="1">1633459204114</td><td rowspan="1">12814</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Tests.HomeDelivery</td><td><a href="#m0">CityNotValidTest</a></td><td rowspan="1">1633779752933</td><td rowspan="1">483</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">Tests.HomeDelivery</td><td><a href="#m1">AddMeal_1Test</a></td><td rowspan="1">1633779765229</td><td rowspan="1">3899</td></tr><tr class="passedeven"><td><a href="#m2">AddMeal_2Test</a></td><td rowspan="1">1633779769130</td><td rowspan="1">3644</td></tr><tr class="passedeven"><td><a href="#m3">CityValidTest</a></td><td rowspan="1">1633779753424</td><td rowspan="1">11802</td></tr></tbody>
 </table>
-<h2>test1</h2><h3 id="m0">Tests.ChatOnLine#ChatOnLineTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [2] but found [1]
-	at Japanika.Functions.IdentifyChat(Functions.java:21)
-	at Tests.ChatOnLine.ChatOnLineTest(ChatOnLine.java:45)
+<h2>Default test</h2><h3 id="m0">Tests.HomeDelivery#CityNotValidTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [2] but found [1]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at Japanika.Functions.HomeDeliveryNotValid(Functions.java:38)
+	at Tests.HomeDelivery.CityNotValidTest(HomeDelivery.java:64)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>test2+test3</h2><h3 id="m1">Tests.HomeDelivery#CityNotValidTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [2] but found [1]
-	at Japanika.Functions.HomeDeliveryNotValid(Functions.java:36)
-	at Tests.HomeDelivery.CityNotValidTest(HomeDelivery.java:63)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">Tests.HomeDelivery#AddMeal_1Test</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">Tests.HomeDelivery#AddMeal_2Test</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">Tests.HomeDelivery#CityValidTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Tests.HomeDelivery#AddMeal_1Test</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">Tests.HomeDelivery#AddMeal_2Test</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">Tests.HomeDelivery#CityValidTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
