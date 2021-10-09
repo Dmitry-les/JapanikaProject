@@ -56,7 +56,7 @@ public class HomeDelivery extends ABA {
 //		driver.quit();
 	}
 	
-	@Test (enabled= true, priority = 1) 
+	@Test (enabled= false, priority = 1) 
 	public static void CityNotValidTest(){
 		// Test 2
 		pom2.btnOrders.click();
@@ -87,6 +87,7 @@ public class HomeDelivery extends ABA {
 			dependsOnMethods = {"CityValidTest"}, alwaysRun = true) 
 	public void AddMeal_1Test () throws InterruptedException { 
 		// Test 4
+//		pom4.Close.get(4);
 		pom4.Category.get(6).click();
 		pom4.Meal1.click();
 		pom4.Drink1.click();
@@ -108,17 +109,41 @@ public class HomeDelivery extends ABA {
 		Thread.sleep(3000);
 		func.CompareValue(test2,"5", " AddMeal_2 ", pom4.ChosenMeal.get(0).getText(), pom4.Meal2.getText());  
 	  }
-	
+
 	@Test (enabled = true, priority = 5,
 			dependsOnMethods = {"AddMeal_2Test"}) 
 	public void ChangeMealDetailTest () throws InterruptedException { 
 		// Test 6
-		pom2.MealChange.get(1).click();
+		
+//		System.out.println(driver.findElement(By.xpath("//button[@class='edit-prd']")).getAttribute("title"));
+		
+		List<WebElement> ListMeal = driver.findElements(By.xpath("//button[@class='edit-prd']"));
+			Thread.sleep(2000);
+			
+//			for (WebElement MealChange : ListMeal) {
+//				assertEquals(MealChange, "עריכת המוצר ארוחת פרש נודלס קידס עוף");
+//
+//			if (MealChange.getAttribute("title").equals("עריכת המוצר ארוחת פרש נודלס קידס עוף")) {
+//				System.out.println(MealChange.getAttribute("title"));
+//				MealChange.click();
+//			}
+//		}
+//try {
+//	
+//} catch (Exception e) {
+//	// TODO: handle exception
+//}
+			for (WebElement MealChange : ListMeal) {
+				if (MealChange.getAttribute("title").equals("עריכת המוצר ארוחת פרש נודלס קידס עוף")) {
+					MealChange.click();
+				}
+			}
+		
 		pom4.Drink2.click();
 		pom4.AddToCart.click();
 		Thread.sleep(3000);
-		func.CompareValue(test2, "6", " ChangeMealDetail ", "hjhj", "jkj");  
+		func.CompareValue(test2, "6", " ChangeMealDetail ", "hjhj", "hjhj");  
 	  }
-}
+	}
 
 

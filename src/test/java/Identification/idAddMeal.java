@@ -32,6 +32,9 @@ public class idAddMeal {
 	@FindBy (className = "cb_label")
 	public static List<WebElement> Gluten;
 	
+	@FindBy (className = "//button[@class='close']")
+	public static List<WebElement> Close;
+	
 	
 	
 }

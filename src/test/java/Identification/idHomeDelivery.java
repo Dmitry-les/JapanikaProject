@@ -34,11 +34,12 @@ public class idHomeDelivery {
 	@FindBy (className = "cat-label")
 	public static List<WebElement> Category;
 	
-	@FindBy (className = "//*[@class=\"edit-prd\"]")
+	@FindBy (className = "//button[@class='edit-prd']")
 	public static List<WebElement> MealChange;
 	
-//	@FindBy (className = "cat-label")
-//	public static List<WebElement> Category;
+//	@FindBy (className = "//*[@class=\"edit-prd\"]")
+//	public static WebElement MealChange;
+//	
 	
 	
 }
