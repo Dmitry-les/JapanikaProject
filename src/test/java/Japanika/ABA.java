@@ -18,8 +18,6 @@ public class ABA {
 	public static ExtentReports extent;
 	public static ExtentTest test1;
 	public static ExtentTest test2;
-	public static ExtentTest test3;
-	public static ExtentTest test4;
-	public static ExtentTest test5;
+
 
 }

@@ -89,16 +89,16 @@ public class HomeDelivery extends ABA {
 		// Test 4
 		pom4.Category.get(6).click();
 		pom4.Meal1.click();
-		pom4.Drink.click();
+		pom4.Drink1.click();
 		pom4.AddToCart.click();
 		Thread.sleep(3000);
-		func.CompareValue(test2,"4"," AddMeal_1Test ", pom4.ChosenMeal.get(0).getText(), pom4.Meal1.getText());  
+		func.CompareValue(test2,"4"," AddMeal_1 ", pom4.ChosenMeal.get(0).getText(), pom4.Meal1.getText());  
 //		func.CompareValue(test2," AddMeal_1Test ", "jhj", pom4.Meal1.getText());  
 
 	  }
 	
 	@Test (enabled = true, priority = 4,
-			dependsOnMethods = {"AddMeal_1"}) 
+			dependsOnMethods = {"AddMeal_1Test"}) 
 	public void AddMeal_2Test () throws InterruptedException { 
 		// Test 5
 		pom4.Category.get(2).click();
@@ -109,6 +109,16 @@ public class HomeDelivery extends ABA {
 		func.CompareValue(test2,"5", " AddMeal_2 ", pom4.ChosenMeal.get(0).getText(), pom4.Meal2.getText());  
 	  }
 	
+	@Test (enabled = true, priority = 5,
+			dependsOnMethods = {"AddMeal_2Test"}) 
+	public void ChangeMealDetailTest () throws InterruptedException { 
+		// Test 6
+		pom2.MealChange.get(1).click();
+		pom4.Drink2.click();
+		pom4.AddToCart.click();
+		Thread.sleep(3000);
+		func.CompareValue(test2, "6", " ChangeMealDetail ", "hjhj", "jkj");  
+	  }
 }
 
 
