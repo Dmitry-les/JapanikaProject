@@ -3,14 +3,20 @@ package Tests;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.fail;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import javax.swing.event.ListDataListener;
+import javax.xml.xpath.XPath;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
@@ -38,21 +44,19 @@ public class HomeDelivery extends ABA {
 		
 		pom4 = new idAddMeal();
 		pom4 = PageFactory.initElements(driver, idAddMeal.class);
-		  
+
 		extent = Jap.GetExtent();
-		test2 = Jap.createTest("Test2", "CityNotValid");
-		test3 = Jap.createTest("Test3", "CityValid");
-		test4 = Jap.createTest("Test4", "AddMeal_1");
-		test5 = Jap.createTest("Test5", "AddMeal_2");
+		test2 = Jap.createTest("Test2", "HomeDelivery");
 	}
-	@AfterClass(alwaysRun=true)
+	
+	@AfterClass (alwaysRun=true)
 	public void afterClass() throws InterruptedException {
 		Thread.sleep(1000);
 		extent.flush();
 //		driver.quit();
 	}
 	
-	@Test (enabled= false, priority = 1) 
+	@Test (enabled= true, priority = 1) 
 	public static void CityNotValidTest(){
 		pom2.btnOrders.click();
 		pom2.CityField.click();
@@ -74,33 +78,32 @@ public class HomeDelivery extends ABA {
 		pom2.HouseNumber.sendKeys("5");   // בית מספר
 		pom2.Approve.click();
 		Thread.sleep(3000);
-		func.CompareValue(test3," CityValid ", pom2.Category.get(0).getText() , "יש לי קופון");
+		func.CompareValue(test2," CityValid ", pom2.Category.get(0).getText() , "יש לי קופון");
 	}
 	
 	@Test (enabled= true, priority = 3,
 			dependsOnMethods = {"CityValidTest"}, alwaysRun = true) 
-	public void AddMeal_1Test () {
-//		Select mySelection = new Select(pom4.Category);
-//		mySelection.selectByVisibleText("בהרכבה סושי");
-//		System.out.println(mySelection);
+	public void AddMeal_1Test () throws InterruptedException {
 		pom4.Category.get(6).click();
 		pom4.Meal1.click();
 		pom4.Drink.click();
 		pom4.AddToCart.click();
-		func.CompareValue(test4," AddMeal_1Test ", pom4.ChosenMeal.get(0).getText(), pom4.Meal1.getText());  
+		Thread.sleep(3000);
+		func.CompareValue(test2," AddMeal_1Test ", pom4.ChosenMeal.get(0).getText(), pom4.Meal1.getText());  
+//		func.CompareValue(test2," AddMeal_1Test ", "jhj", pom4.Meal1.getText());  
+
 	  }
 	
 	@Test (enabled = true, priority = 4,
 			dependsOnMethods = {"AddMeal_1Test"}) 
-	public void AddMeal_2Test () {
+	public void AddMeal_2Test () throws InterruptedException {
 		pom4.Category.get(2).click();
 		pom4.Meal2.click();
 		pom4.Gluten.get(1).click();
 		pom4.AddToCart.click();
-		System.out.println(pom4.ChosenMeal.get(1).getText());  //   get (???)
-		System.out.println(pom4.Meal2.getText());
+		Thread.sleep(3000);
+		func.CompareValue(test2," AddMeal_2Test ", pom4.ChosenMeal.get(0).getText(), pom4.Meal2.getText());  
 
-		func.CompareValue(test5," AddMeal_2 ", pom4.ChosenMeal.get(1).getText(), pom4.Meal2.getText());  
 	  }
 	
 }

@@ -1,5 +1,7 @@
 package Japanika;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.By;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -16,6 +18,7 @@ public class Functions extends ABA {
 
 		}catch (Exception e) {
 			test.fail("test " + testName + " fail");
+			assertEquals("1","2");
 //			test.pass("test " + pom.TitleChat.getAttribute("alt")+ " faild");   // עברית קורא לא
 			System.out.println("test " + pom1.TitleChat.getAttribute("alt") + " fail");
 		}
@@ -30,10 +33,12 @@ public class Functions extends ABA {
 				System.out.println("test" + testName + "pass");
 			} else {
 				test2.fail("test" + testName + "fail");
+				assertEquals("1","2");
 				System.out.println("test" + testName + "fail");
 			}
 		} else {
 			test2.fail("test" + testName + "fail");
+			assertEquals("1","2");
 			System.out.println("טסט נפל בלחיצה על שדה עיר");
 		}
 	}
@@ -45,6 +50,7 @@ public class Functions extends ABA {
 			System.out.println("test" + testName + "pass");
 		} else {
 			test.fail("test" + testName + "fail");
+			assertEquals("1","2");
 			System.out.println("test" + testName + "fail");
 		}
 	}

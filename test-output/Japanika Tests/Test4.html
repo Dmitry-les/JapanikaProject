@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test4</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Oct 03 22:07:36 IDT 2021</td>
+<td>Started on:</td><td>Tue Oct 05 21:36:49 IDT 2021</td>
 </tr>
-<tr><td>Total time:</td><td>20 seconds (20079 ms)</td>
+<tr><td>Total time:</td><td>28 seconds (28095 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,21 +75,21 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Tests.HomeDelivery.AddMeal_1Test()'><b>AddMeal_1Test</b><br>Test class: Tests.HomeDelivery</td>
-<td><div><pre>org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been &quot;select&quot; but was &quot;span&quot;
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-V6QH7CG&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.&lt;init&gt;(Select.java:48)
-	at Tests.HomeDelivery.AddMeal_1Test(HomeDelivery.java:81)
+<td title='Tests.HomeDelivery.CityNotValidTest()'><b>CityNotValidTest</b><br>Test class: Tests.HomeDelivery</td>
+<td><div><pre>java.lang.AssertionError: expected [2] but found [1]
+	at Japanika.Functions.HomeDeliveryNotValid(Functions.java:36)
+	at Tests.HomeDelivery.CityNotValidTest(HomeDelivery.java:63)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace828610686", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace828610686'><pre>org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been &quot;select&quot; but was &quot;span&quot;
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-V6QH7CG&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.&lt;init&gt;(Select.java:48)
-	at Tests.HomeDelivery.AddMeal_1Test(HomeDelivery.java:81)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace687399269", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace687399269'><pre>java.lang.AssertionError: expected [2] but found [1]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at Japanika.Functions.HomeDeliveryNotValid(Functions.java:36)
+	at Tests.HomeDelivery.CityNotValidTest(HomeDelivery.java:63)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -130,9 +130,19 @@ Driver info: driver.version: unknown
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='Tests.HomeDelivery.AddMeal_2Test()'><b>AddMeal_2Test</b><br>Test class: Tests.HomeDelivery</td>
+<td></td>
+<td>3</td>
+<td>Tests.HomeDelivery@2145b572</td></tr>
+<tr>
 <td title='Tests.HomeDelivery.CityValidTest()'><b>CityValidTest</b><br>Test class: Tests.HomeDelivery</td>
 <td></td>
-<td>11</td>
+<td>12</td>
+<td>Tests.HomeDelivery@2145b572</td></tr>
+<tr>
+<td title='Tests.HomeDelivery.AddMeal_1Test()'><b>AddMeal_1Test</b><br>Test class: Tests.HomeDelivery</td>
+<td></td>
+<td>4</td>
 <td>Tests.HomeDelivery@2145b572</td></tr>
 </table><p>
 </body>
