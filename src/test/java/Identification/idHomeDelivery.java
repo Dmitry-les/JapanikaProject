@@ -16,9 +16,6 @@ public class idHomeDelivery {
 	@FindBy (xpath = "//*[@id=\"select2-autocomplete_city-container\"]/span")
 	public static WebElement CityField;
 	
-	@FindBy (xpath = "//*[@id=\"select2-autocomplete_street-container\"]/span")
-	public static WebElement StreetField;
-	
 	@FindBy (xpath = "//*[@id=\"select2-autocomplete_city-results\"]/li")
 	public static WebElement AlertCity;
 

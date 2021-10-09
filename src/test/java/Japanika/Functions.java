@@ -8,50 +8,52 @@ import com.aventstack.extentreports.ExtentTest;
 
 public class Functions extends ABA {
 	
-	public static void IdentifyChat (ExtentTest test, String testName){
+	public static void IdentifyChat (ExtentTest test, String testNumber, String testName){
 	
 		try {
 			pom1.ChatWindow.isEnabled();
-			test.pass("test " + testName + " pass");
+			test.pass("Test" + testNumber + testName + " Pass");
 //			test.pass("test " + pom.TitleChat.getAttribute("alt")+ " pass");   // עברית קורא לא
-			System.out.println("test " + pom1.TitleChat.getAttribute("alt") + " pass");
+			System.out.println("Test " + pom1.TitleChat.getAttribute("alt") + " Pass");
 
 		}catch (Exception e) {
-			test.fail("test " + testName + " fail");
-			assertEquals("1","2");
+			test.fail("Test" + testNumber + testName + " Fail");
 //			test.pass("test " + pom.TitleChat.getAttribute("alt")+ " faild");   // עברית קורא לא
-			System.out.println("test " + pom1.TitleChat.getAttribute("alt") + " fail");
+			System.out.println("Test " + pom1.TitleChat.getAttribute("alt") + " Fail");
+			assertEquals("1","2");
 		}
 	}
 	
-	public static void HomeDeliveryNotValid (ExtentTest test,String testName, String MyAlertName){
+	public static void HomeDeliveryNotValid (ExtentTest test, String testNumber, 
+			String testName, String MyAlertName){
 
 		if (pom2.AlertCity.getText().equals(MyAlertName)) {
 			pom2.InputField.sendKeys("א");
 			if (pom2.AlertCity.getText().equals(MyAlertName)) {
-				test2.pass("test" + testName + "pass");
-				System.out.println("test" + testName + "pass");
+				test.pass("Test" + testNumber + testName + "Pass");
+				System.out.println("Test" + testNumber + testName + "Pass");
 			} else {
-				test2.fail("test" + testName + "fail");
+				test.fail("Test" + testNumber + testName + "Fail");
+				System.out.println("Test" + testNumber + testName + "Fail");
 				assertEquals("1","2");
-				System.out.println("test" + testName + "fail");
 			}
 		} else {
-			test2.fail("test" + testName + "fail");
-			assertEquals("1","2");
+			test.fail("Test" + testNumber +  testName + "Fail");
 			System.out.println("טסט נפל בלחיצה על שדה עיר");
+			assertEquals("1","2");
 		}
 	}
 	
-	public static void CompareValue (ExtentTest test, String testName, String x, String y){
+	public static void CompareValue (ExtentTest test, String testNumber, 
+			String testName, String x, String y){
 
 		if (x.equals(y)) {
-			test.pass("test" + testName + "pass");
-			System.out.println("test" + testName + "pass");
+			test.pass("Test" + testNumber + testName + "Pass");
+			System.out.println("Test" + testNumber + testName + "Pass");
 		} else {
-			test.fail("test" + testName + "fail");
+			test.fail("Test"+ testNumber + testName + "Fail");
+			System.out.println("Test" + testNumber + testName + "Fail");
 			assertEquals("1","2");
-			System.out.println("test" + testName + "fail");
 		}
 	}
 }

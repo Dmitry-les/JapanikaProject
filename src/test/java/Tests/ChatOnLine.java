@@ -29,7 +29,7 @@ public class ChatOnLine extends ABA {
 		pom1 = PageFactory.initElements(driver, idChat.class);
 		
 		extent = Jap.GetExtent();
-		test1 = Jap.createTest("Test1", "ChatOnLine");
+		test1 = Jap.createTest("ChatOnLineTest", "ChatOnLine");
 	}
 	@AfterClass
 	public static void afterClass() throws InterruptedException {
@@ -42,7 +42,7 @@ public class ChatOnLine extends ABA {
 	public static void ChatOnLineTest(){
 		pom1.BtnChatOnLine.click();   // יכשל טסט 
 //		pom1.BtnChat.click();         // יצליח טסט
-		func.IdentifyChat(test1, " ChatOnLine ");
+		func.IdentifyChat(test1, "1", " ChatOnLine ");
 
 	}
 }

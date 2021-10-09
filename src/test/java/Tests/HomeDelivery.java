@@ -46,7 +46,7 @@ public class HomeDelivery extends ABA {
 		pom4 = PageFactory.initElements(driver, idAddMeal.class);
 
 		extent = Jap.GetExtent();
-		test2 = Jap.createTest("Test2", "HomeDelivery");
+		test2 = Jap.createTest("HomeDeliveryTest", "HomeDelivery");
 	}
 	
 	@AfterClass (alwaysRun=true)
@@ -58,13 +58,15 @@ public class HomeDelivery extends ABA {
 	
 	@Test (enabled= true, priority = 1) 
 	public static void CityNotValidTest(){
+		// Test 2
 		pom2.btnOrders.click();
 		pom2.CityField.click();
-		func.HomeDeliveryNotValid(test2," CityNotValid ", "הקלד לפחות 2 תווים ונווט עם חיצי המקלדת");
+		func.HomeDeliveryNotValid(test2,"2"," CityNotValid ", "הקלד לפחות 2 תווים ונווט עם חיצי המקלדת");
 	}
 
 	@Test (enabled= true, priority = 2) 
 	public static void CityValidTest() throws InterruptedException{
+		// Test 3
 		driver.get("https://www.japanika.net/");
 		pom2.btnOrders.click();
 		pom2.CityField.click();
@@ -78,32 +80,33 @@ public class HomeDelivery extends ABA {
 		pom2.HouseNumber.sendKeys("5");   // בית מספר
 		pom2.Approve.click();
 		Thread.sleep(3000);
-		func.CompareValue(test2," CityValid ", pom2.Category.get(0).getText() , "יש לי קופון");
+		func.CompareValue(test2,"3", " CityValid ", pom2.Category.get(0).getText() , "יש לי קופון");
 	}
 	
 	@Test (enabled= true, priority = 3,
 			dependsOnMethods = {"CityValidTest"}, alwaysRun = true) 
-	public void AddMeal_1Test () throws InterruptedException {
+	public void AddMeal_1Test () throws InterruptedException { 
+		// Test 4
 		pom4.Category.get(6).click();
 		pom4.Meal1.click();
 		pom4.Drink.click();
 		pom4.AddToCart.click();
 		Thread.sleep(3000);
-		func.CompareValue(test2," AddMeal_1Test ", pom4.ChosenMeal.get(0).getText(), pom4.Meal1.getText());  
+		func.CompareValue(test2,"4"," AddMeal_1Test ", pom4.ChosenMeal.get(0).getText(), pom4.Meal1.getText());  
 //		func.CompareValue(test2," AddMeal_1Test ", "jhj", pom4.Meal1.getText());  
 
 	  }
 	
 	@Test (enabled = true, priority = 4,
-			dependsOnMethods = {"AddMeal_1Test"}) 
-	public void AddMeal_2Test () throws InterruptedException {
+			dependsOnMethods = {"AddMeal_1"}) 
+	public void AddMeal_2Test () throws InterruptedException { 
+		// Test 5
 		pom4.Category.get(2).click();
 		pom4.Meal2.click();
 		pom4.Gluten.get(1).click();
 		pom4.AddToCart.click();
 		Thread.sleep(3000);
-		func.CompareValue(test2," AddMeal_2Test ", pom4.ChosenMeal.get(0).getText(), pom4.Meal2.getText());  
-
+		func.CompareValue(test2,"5", " AddMeal_2 ", pom4.ChosenMeal.get(0).getText(), pom4.Meal2.getText());  
 	  }
 	
 }
