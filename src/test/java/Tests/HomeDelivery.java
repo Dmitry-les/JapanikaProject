@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 import javax.swing.event.ListDataListener;
 import javax.xml.xpath.XPath;
 
+import org.apache.poi.hssf.record.PageBreakRecord.Break;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -106,7 +107,7 @@ public class HomeDelivery extends ABA {
 		pom4.Meal2.click();
 		pom4.Gluten.get(1).click();
 		pom4.AddToCart.click();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		func.CompareValue(test2,"5", " AddMeal_2 ", pom4.ChosenMeal.get(0).getText(), pom4.Meal2.getText());  
 	  }
 
@@ -114,36 +115,30 @@ public class HomeDelivery extends ABA {
 			dependsOnMethods = {"AddMeal_2Test"}) 
 	public void ChangeMealDetailTest () throws InterruptedException { 
 		// Test 6
-		
-//		System.out.println(driver.findElement(By.xpath("//button[@class='edit-prd']")).getAttribute("title"));
-		
 		List<WebElement> ListMeal = driver.findElements(By.xpath("//button[@class='edit-prd']"));
-			Thread.sleep(2000);
-			
-//			for (WebElement MealChange : ListMeal) {
-//				assertEquals(MealChange, "עריכת המוצר ארוחת פרש נודלס קידס עוף");
-//
-//			if (MealChange.getAttribute("title").equals("עריכת המוצר ארוחת פרש נודלס קידס עוף")) {
-//				System.out.println(MealChange.getAttribute("title"));
-//				MealChange.click();
-//			}
-//		}
-//try {
-//	
-//} catch (Exception e) {
-//	// TODO: handle exception
-//}
-			for (WebElement MealChange : ListMeal) {
-				if (MealChange.getAttribute("title").equals("עריכת המוצר ארוחת פרש נודלס קידס עוף")) {
-					MealChange.click();
+			try {
+				for (WebElement MealChange : ListMeal) {
+					Thread.sleep(1000);
+					if (MealChange.getAttribute("title").equals("עריכת המוצר ארוחת פרש נודלס קידס עוף")) {
+						MealChange.click();
+					}
 				}
+				Thread.sleep(1000);
+				pom4.Drink2.click();
+				pom4.AddToCart.click();
+				System.out.println(pom4.Drink2.getText());
+				List<WebElement> ListNotes = driver.findElements(By.xpath("text contein"));
+				for (WebElement Notes : ListNotes) {
+					Thread.sleep(1000);
+					if (Notes.getAttribute("title").equals(pom4.Drink2.getText())) {
+						func.CompareValue(test2, "6", " ChangeMealDetail ", Notes.getText(), pom4.Drink2.getText());  
+					}
+				}
+//				func.CompareValue(test2, "6", " ChangeMealDetail ", "מים אפרסק אישי", pom4.Drink2.getText());  
+			} catch (Exception e) {
+				assertEquals("Meal Change", "Expected Meal Change");
 			}
-		
-		pom4.Drink2.click();
-		pom4.AddToCart.click();
-		Thread.sleep(3000);
-		func.CompareValue(test2, "6", " ChangeMealDetail ", "hjhj", "hjhj");  
 	  }
-	}
+}
 
 
