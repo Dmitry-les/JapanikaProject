@@ -17,7 +17,7 @@ public class idAddMeal {
 	@FindBy (xpath = "//*[@id=\"component_1164273\"]//*[contains(text(),'ספרייט אישי')]")
 	public static WebElement Drink1;
 	
-	@FindBy (xpath = "//*[@id=\"component_1164273\"]//*[contains(text(),'מים אפרסק אישי')]")
+	@FindBy (xpath = "//*[@id=\"component_1164273\"]//*[contains(text(),'סודה אישי')]")
 	public static WebElement Drink2;
 	
 	@FindBy (id = "add-to-cart")
