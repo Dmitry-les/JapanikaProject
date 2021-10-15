@@ -37,9 +37,9 @@ public class idHomeDelivery {
 	@FindBy (className = "//button[@class='edit-prd']")
 	public static List<WebElement> MealChange;
 	
-//	@FindBy (className = "//*[@class=\"edit-prd\"]")
-//	public static WebElement MealChange;
-//	
+	@FindBy (xpath = "//div[@class='note-row']/span")
+	public static List<WebElement> ListNotes;
+	
 	
 	
 }

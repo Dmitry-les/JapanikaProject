@@ -116,34 +116,33 @@ public class HomeDelivery extends ABA {
 	public void ChangeMealDetailTest () throws InterruptedException { 
 		// Test 6
 	List<WebElement> ListMeal = driver.findElements(By.xpath("//button[@class='edit-prd']"));
-//		try {
-			for (WebElement MealChange : ListMeal) {
-				Thread.sleep(1000);
-				if (MealChange.getAttribute("title").equals("עריכת המוצר ארוחת פרש נודלס קידס עוף")) {
-					MealChange.click();
-				}
+		for (WebElement MealChange : ListMeal) {
+			Thread.sleep(1000);
+			if (MealChange.getAttribute("title").equals("עריכת המוצר ארוחת פרש נודלס קידס עוף")) {
+				MealChange.click();
 			}
+		}
 		Thread.sleep(1000);
 		pom4.Drink2.click();    //בחירת סודה אישית
 		pom4.AddToCart.click();
-		System.out.println(pom4.Drink2.getText());
-		List<WebElement> ListNotes = driver.findElements(By.xpath("//div[@class='note-row']/span"));
-		// יהוי לא מוצלח
-//			Thread.sleep(2000);
-			System.out.println(ListNotes.get(0).getText());
-			System.out.println(ListNotes.get(1).getText());
-			for (WebElement Notes : ListNotes) {
-				System.out.println();
-				System.out.println(Notes.getText());
-				if (Notes.getText().equals(pom4.Drink2.getText())) {
-					func.CompareValue(test2, "6", " ChangeMealDetail ", Notes.getText(), pom4.Drink2.getText());  
+		pom4.Drink2.getText();
+		Thread.sleep(1000);
+		String Note1 = null;
+		try {
+			for (WebElement Note : pom2.ListNotes) {
+				if (!Note.getText().equals("סו דה אישי")) {
+					System.out.println("לא שווה");
+					func.CompareValue(test2, "6", " ChangeMealDetail ", Note.getText(), "סודה אישי"); 
+				}else {
+					System.out.println("שווה");
+					func.CompareValue(test2, "6", " ChangeMealDetail ", Note.getText(), "סודה אישי"); 
+					break;
 				}
 			}
-//				func.CompareValue(test2, "6", " ChangeMealDetail ", "מים אפרסק אישי", pom4.Drink2.getText());  
-//		} catch (Exception e) {
-//			assertEquals("Meal Change", "Expected Meal Change");
-//		}
-	  }
+		} catch (Exception e) {
+			assertEquals("Change Meal Detail", "Expected Change Meal Detail");
+		}
+	}
 }
 
 
