@@ -5,9 +5,12 @@
     <classes>
       <class name="Tests.HomeDelivery">
         <methods>
-          <include name="CityNotValidTest"/>
+          <include name="CityValidTest"/>
+          <include name="AddMeal_2Test"/>
+          <include name="ChangeMealDetailTest"/>
           <include name="BeforeClass"/>
           <include name="afterClass"/>
+          <include name="AddMeal_1Test"/>
         </methods>
       </class> <!-- Tests.HomeDelivery -->
     </classes>
