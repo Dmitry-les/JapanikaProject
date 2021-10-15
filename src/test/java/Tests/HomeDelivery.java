@@ -127,10 +127,9 @@ public class HomeDelivery extends ABA {
 		pom4.AddToCart.click();
 		pom4.Drink2.getText();
 		Thread.sleep(1000);
-		String Note1 = null;
 		try {
 			for (WebElement Note : pom2.ListNotes) {
-				if (!Note.getText().equals("סו דה אישי")) {
+				if (!Note.getText().equals("סודה אישי")) {
 					System.out.println("לא שווה");
 					func.CompareValue(test2, "6", " ChangeMealDetail ", Note.getText(), "סודה אישי"); 
 				}else {
