@@ -2,42 +2,41 @@
 <testng-results ignored="1" total="5" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-15T17:48:38 IDT" name="Default suite" finished-at="2021-10-15T17:49:08 IDT" duration-ms="30287">
+  <suite started-at="2021-10-15T18:12:16 IDT" name="Default suite" finished-at="2021-10-15T18:12:43 IDT" duration-ms="26900">
     <groups>
     </groups>
-    <test started-at="2021-10-15T17:48:38 IDT" name="Default test" finished-at="2021-10-15T17:49:08 IDT" duration-ms="30287">
+    <test started-at="2021-10-15T18:12:16 IDT" name="Default test" finished-at="2021-10-15T18:12:43 IDT" duration-ms="26900">
       <class name="Tests.HomeDelivery">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Tests.HomeDelivery@72f926e6]" started-at="2021-10-15T17:48:38 IDT" name="BeforeClass" finished-at="2021-10-15T17:48:43 IDT" duration-ms="5293" status="PASS">
+        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Tests.HomeDelivery@72f926e6]" started-at="2021-10-15T18:12:16 IDT" name="BeforeClass" finished-at="2021-10-15T18:12:21 IDT" duration-ms="5387" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method signature="CityValidTest()[pri:2, instance:Tests.HomeDelivery@72f926e6]" started-at="2021-10-15T17:48:43 IDT" name="CityValidTest" finished-at="2021-10-15T17:48:56 IDT" duration-ms="12243" status="PASS">
+        <test-method signature="CityValidTest()[pri:2, instance:Tests.HomeDelivery@72f926e6]" started-at="2021-10-15T18:12:21 IDT" name="CityValidTest" finished-at="2021-10-15T18:12:34 IDT" duration-ms="12345" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CityValidTest -->
-        <test-method signature="AddMeal_1Test()[pri:3, instance:Tests.HomeDelivery@72f926e6]" started-at="2021-10-15T17:48:56 IDT" name="AddMeal_1Test" finished-at="2021-10-15T17:49:00 IDT" depends-on-methods="Tests.HomeDelivery.CityValidTest" duration-ms="3877" status="PASS">
+        <test-method signature="AddMeal_1Test()[pri:3, instance:Tests.HomeDelivery@72f926e6]" started-at="2021-10-15T18:12:34 IDT" name="AddMeal_1Test" finished-at="2021-10-15T18:12:37 IDT" depends-on-methods="Tests.HomeDelivery.CityValidTest" duration-ms="3871" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddMeal_1Test -->
-        <test-method signature="AddMeal_2Test()[pri:4, instance:Tests.HomeDelivery@72f926e6]" started-at="2021-10-15T17:49:00 IDT" name="AddMeal_2Test" finished-at="2021-10-15T17:49:02 IDT" depends-on-methods="Tests.HomeDelivery.AddMeal_1Test" duration-ms="2660" status="PASS">
+        <test-method signature="AddMeal_2Test()[pri:4, instance:Tests.HomeDelivery@72f926e6]" started-at="2021-10-15T18:12:37 IDT" name="AddMeal_2Test" finished-at="2021-10-15T18:12:40 IDT" depends-on-methods="Tests.HomeDelivery.AddMeal_1Test" duration-ms="2650" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddMeal_2Test -->
-        <test-method signature="ChangeMealDetailTest()[pri:5, instance:Tests.HomeDelivery@72f926e6]" started-at="2021-10-15T17:49:02 IDT" name="ChangeMealDetailTest" finished-at="2021-10-15T17:49:07 IDT" depends-on-methods="Tests.HomeDelivery.AddMeal_2Test" duration-ms="4665" status="FAIL">
+        <test-method signature="ChangeMealDetailTest()[pri:5, instance:Tests.HomeDelivery@72f926e6]" started-at="2021-10-15T18:12:40 IDT" name="ChangeMealDetailTest" finished-at="2021-10-15T18:12:41 IDT" depends-on-methods="Tests.HomeDelivery.AddMeal_2Test" duration-ms="1085" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [2] but found [1]]]>
+              <![CDATA[expected [ChangeMeal Pass] but found [ChangeMeal Fail]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [2] but found [1]
+              <![CDATA[java.lang.AssertionError: expected [ChangeMeal Pass] but found [ChangeMeal Fail]
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
 at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 at org.testng.Assert.assertEquals(Assert.java:122)
 at org.testng.Assert.assertEquals(Assert.java:629)
 at org.testng.Assert.assertEquals(Assert.java:639)
-at Japanika.Functions.CompareValue(Functions.java:56)
-at Tests.HomeDelivery.ChangeMealDetailTest(HomeDelivery.java:136)
+at Tests.HomeDelivery.ChangeMealDetailTest(HomeDelivery.java:124)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -72,7 +71,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ChangeMealDetailTest -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:Tests.HomeDelivery@72f926e6]" started-at="2021-10-15T17:49:07 IDT" name="afterClass" finished-at="2021-10-15T17:49:08 IDT" duration-ms="1490" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Tests.HomeDelivery@72f926e6]" started-at="2021-10-15T18:12:41 IDT" name="afterClass" finished-at="2021-10-15T18:12:43 IDT" duration-ms="1502" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

@@ -115,9 +115,9 @@ public class HomeDelivery extends ABA {
 			dependsOnMethods = {"AddMeal_2Test"}) 
 	public void ChangeMealDetailTest () throws InterruptedException { 
 		// Test 6
-	List<WebElement> ListMeal = driver.findElements(By.xpath("//button[@class='edit-prd']"));
-		for (WebElement MealChange : ListMeal) {
-			Thread.sleep(1000);
+	try {
+		for (WebElement MealChange : pom4.ListMealChange) {
+		Thread.sleep(1000);
 			if (MealChange.getAttribute("title").equals("עריכת המוצר ארוחת פרש נודלס קידס עוף")) {
 				MealChange.click();
 			}
@@ -127,7 +127,6 @@ public class HomeDelivery extends ABA {
 		pom4.AddToCart.click();
 		pom4.Drink2.getText();
 		Thread.sleep(1000);
-		try {
 			for (WebElement Note : pom2.ListNotes) {
 				if (!Note.getText().equals("סודה אישי")) {
 					System.out.println("לא שווה");
