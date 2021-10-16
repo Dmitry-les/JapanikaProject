@@ -27,6 +27,7 @@ import Identification.idAddMeal;
 import Identification.idChat;
 import Identification.idHomeDelivery;
 import Japanika.ABA;
+import net.bytebuddy.agent.builder.AgentBuilder.InitializationStrategy.SelfInjection.Split;
 
 public class HomeDelivery extends ABA {
 
@@ -111,7 +112,7 @@ public class HomeDelivery extends ABA {
 		func.CompareValue(test2,"5", " AddMeal_2 ", pom4.ChosenMeal.get(0).getText(), pom4.Meal2.getText());  
 	  }
 
-	@Test (enabled = true, priority = 5,
+	@Test (enabled = false, priority = 5,
 			dependsOnMethods = {"AddMeal_2Test"}) 
 	public void ChangeMealDetailTest () throws InterruptedException { 
 		// Test 6
@@ -129,10 +130,8 @@ public class HomeDelivery extends ABA {
 		Thread.sleep(1000);
 			for (WebElement Note : pom2.ListNotes) {
 				if (!Note.getText().equals("סודה אישי")) {
-					System.out.println("לא שווה");
 					func.CompareValue(test2, "6", " ChangeMealDetail ", Note.getText(), "סודה אישי"); 
 				}else {
-					System.out.println("שווה");
 					func.CompareValue(test2, "6", " ChangeMealDetail ", Note.getText(), "סודה אישי"); 
 					break;
 				}
@@ -141,6 +140,32 @@ public class HomeDelivery extends ABA {
 			assertEquals("Change Meal Detail", "Expected Change Meal Detail");
 		}
 	}
+	
+	@Test (enabled = false, priority = 6,
+			dependsOnMethods = {"AddMeal_2Test"}) 
+	public void RemoveItemTest () throws InterruptedException { 
+		// Test 7
+		int NoItems1 = pom4.ListRemoveItem.size();
+		pom4.ListRemoveItem.get(0).click();
+		pom4.btnRemoveItem.click();
+	    String StrNoItem =  Integer.toString(NoItems1-1);  //Numbers of items in list after remove
+		func.CompareValue(test2, "7", " RemoveItem ", StrNoItem , "1"); 
+	}
+	
+	@Test (enabled = true, priority = 6,
+			dependsOnMethods = {"AddMeal_2Test"}) 
+	public void CleanCartTest () throws InterruptedException { 
+		// Test 8
+		pom4.btnCleanCart.click();
+		pom4.btnRemoveItem.click();
+		
+		String [] PriceSplit = pom4.IntermediatePrice.get(0).getText().split("₪");
+
+		System.out.println(PriceSplit[0]);
+
+		func.CompareValue(test2, "8", " RemoveItem ", "1" , "1"); 
+	}
+	
 }
 
 

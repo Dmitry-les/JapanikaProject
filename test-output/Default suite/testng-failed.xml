@@ -7,8 +7,8 @@
         <methods>
           <include name="CityValidTest"/>
           <include name="AddMeal_2Test"/>
-          <include name="ChangeMealDetailTest"/>
           <include name="BeforeClass"/>
+          <include name="CleanCartTest"/>
           <include name="afterClass"/>
           <include name="AddMeal_1Test"/>
         </methods>
