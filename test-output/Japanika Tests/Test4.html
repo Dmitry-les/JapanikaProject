@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test4</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Oct 15 18:04:30 IDT 2021</td>
+<td>Started on:</td><td>Mon Oct 18 21:34:26 IDT 2021</td>
 </tr>
-<tr><td>Total time:</td><td>38 seconds (38798 ms)</td>
+<tr><td>Total time:</td><td>33 seconds (33072 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,19 +75,21 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Tests.HomeDelivery.ChangeMealDetailTest()'><b>ChangeMealDetailTest</b><br>Test class: Tests.HomeDelivery</td>
-<td><div><pre>java.lang.AssertionError: expected [Expected Change Meal Detail] but found [Change Meal Detail]
-	at Tests.HomeDelivery.ChangeMealDetailTest(HomeDelivery.java:141)
+<td title='Tests.HomeDelivery.CityNotValidTest()'><b>CityNotValidTest</b><br>Test class: Tests.HomeDelivery</td>
+<td><div><pre>java.lang.AssertionError: expected [2] but found [1]
+	at Japanika.Functions.HomeDeliveryNotValid(Functions.java:38)
+	at Tests.HomeDelivery.CityNotValidTest(HomeDelivery.java:66)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace399149970", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace399149970'><pre>java.lang.AssertionError: expected [Expected Change Meal Detail] but found [Change Meal Detail]
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1298557761", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1298557761'><pre>java.lang.AssertionError: expected [2] but found [1]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 	at org.testng.Assert.assertEquals(Assert.java:122)
 	at org.testng.Assert.assertEquals(Assert.java:629)
 	at org.testng.Assert.assertEquals(Assert.java:639)
-	at Tests.HomeDelivery.ChangeMealDetailTest(HomeDelivery.java:141)
+	at Japanika.Functions.HomeDeliveryNotValid(Functions.java:38)
+	at Tests.HomeDelivery.CityNotValidTest(HomeDelivery.java:66)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -117,8 +119,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>13</td>
-<td>Tests.HomeDelivery@39529185</td></tr>
+<td>0</td>
+<td>Tests.HomeDelivery@3daa422a</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -131,17 +133,32 @@ function toggleAllBoxes() {
 <td title='Tests.HomeDelivery.AddMeal_2Test()'><b>AddMeal_2Test</b><br>Test class: Tests.HomeDelivery</td>
 <td></td>
 <td>2</td>
-<td>Tests.HomeDelivery@39529185</td></tr>
+<td>Tests.HomeDelivery@3daa422a</td></tr>
+<tr>
+<td title='Tests.HomeDelivery.RemoveItemTest()'><b>RemoveItemTest</b><br>Test class: Tests.HomeDelivery</td>
+<td></td>
+<td>2</td>
+<td>Tests.HomeDelivery@3daa422a</td></tr>
 <tr>
 <td title='Tests.HomeDelivery.CityValidTest()'><b>CityValidTest</b><br>Test class: Tests.HomeDelivery</td>
 <td></td>
-<td>12</td>
-<td>Tests.HomeDelivery@39529185</td></tr>
+<td>11</td>
+<td>Tests.HomeDelivery@3daa422a</td></tr>
+<tr>
+<td title='Tests.HomeDelivery.CleanCartTest()'><b>CleanCartTest</b><br>Test class: Tests.HomeDelivery</td>
+<td></td>
+<td>0</td>
+<td>Tests.HomeDelivery@3daa422a</td></tr>
+<tr>
+<td title='Tests.HomeDelivery.ChangeMealDetailTest()'><b>ChangeMealDetailTest</b><br>Test class: Tests.HomeDelivery</td>
+<td></td>
+<td>4</td>
+<td>Tests.HomeDelivery@3daa422a</td></tr>
 <tr>
 <td title='Tests.HomeDelivery.AddMeal_1Test()'><b>AddMeal_1Test</b><br>Test class: Tests.HomeDelivery</td>
 <td></td>
 <td>3</td>
-<td>Tests.HomeDelivery@39529185</td></tr>
+<td>Tests.HomeDelivery@3daa422a</td></tr>
 </table><p>
 </body>
 </html>
