@@ -31,6 +31,7 @@ public class ChatOnLine extends ABA {
 		extent = Jap.GetExtent();
 		test1 = Jap.createTest("ChatOnLineTest", "ChatOnLine");
 	}
+	
 	@AfterClass
 	public static void afterClass() throws InterruptedException {
 		Thread.sleep(1000);

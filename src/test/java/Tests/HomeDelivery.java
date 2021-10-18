@@ -160,7 +160,7 @@ public class HomeDelivery extends ABA {
 		pom4.btnCleanCart.click();
 		pom4.btnRemoveItem.click();		
 		String [] splitPrice = pom4.IntermediatePrice.getText().split("\n");
-		func.CompareValue(test2, "8", " RemoveItem ", splitPrice[0] , "0"); 
+		func.CompareValue(test2, "8", " CleanCart ", splitPrice[0] , "0"); 
 	}
 	
 }

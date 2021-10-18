@@ -13,13 +13,11 @@ public class Functions extends ABA {
 		try {
 			pom1.ChatWindow.isEnabled();
 			test.pass("Test" + testNumber + testName + " Pass");
-//			test.pass("test " + pom.TitleChat.getAttribute("alt")+ " pass");   // עברית קורא לא
-			System.out.println("Test " + pom1.TitleChat.getAttribute("alt") + " Pass");
+			System.out.println("Test " + testNumber + testName + " Pass");
 
 		}catch (Exception e) {
 			test.fail("Test" + testNumber + testName + " Fail");
-//			test.pass("test " + pom.TitleChat.getAttribute("alt")+ " faild");   // עברית קורא לא
-			System.out.println("Test " + pom1.TitleChat.getAttribute("alt") + " Fail");
+			System.out.println("Test " + testNumber + testName + " Fail");
 			assertEquals("1","2");
 		}
 	}
