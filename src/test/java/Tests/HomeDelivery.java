@@ -58,7 +58,7 @@ public class HomeDelivery extends ABA {
 //		driver.quit();
 	}
 	
-	@Test (enabled= false, priority = 1) 
+	@Test (enabled= true, priority = 1) 
 	public static void CityNotValidTest(){
 		// Test 2
 		pom2.btnOrders.click();
@@ -87,7 +87,7 @@ public class HomeDelivery extends ABA {
 	
 	@Test (enabled= true, priority = 3,
 			dependsOnMethods = {"CityValidTest"}, alwaysRun = true) 
-	public void AddMeal_1Test () throws InterruptedException { 
+	public static void AddMeal_1Test () throws InterruptedException { 
 		// Test 4
 //		pom4.Close.get(4);
 		pom4.Category.get(6).click();
@@ -102,7 +102,7 @@ public class HomeDelivery extends ABA {
 	
 	@Test (enabled = true, priority = 4,
 			dependsOnMethods = {"AddMeal_1Test"}) 
-	public void AddMeal_2Test () throws InterruptedException { 
+	public static void AddMeal_2Test () throws InterruptedException { 
 		// Test 5
 		pom4.Category.get(2).click();
 		pom4.Meal2.click();
@@ -112,58 +112,55 @@ public class HomeDelivery extends ABA {
 		func.CompareValue(test2,"5", " AddMeal_2 ", pom4.ChosenMeal.get(0).getText(), pom4.Meal2.getText());  
 	  }
 
-	@Test (enabled = false, priority = 5,
+	@Test (enabled = true, priority = 5,
 			dependsOnMethods = {"AddMeal_2Test"}) 
-	public void ChangeMealDetailTest () throws InterruptedException { 
+	public static void ChangeMealDetailTest () throws InterruptedException { 
 		// Test 6
-	try {
-		for (WebElement MealChange : pom4.ListMealChange) {
-		Thread.sleep(1000);
-			if (MealChange.getAttribute("title").equals("עריכת המוצר ארוחת פרש נודלס קידס עוף")) {
-				MealChange.click();
-			}
-		}
-		Thread.sleep(1000);
-		pom4.Drink2.click();    //בחירת סודה אישית
-		pom4.AddToCart.click();
-		pom4.Drink2.getText();
-		Thread.sleep(1000);
-			for (WebElement Note : pom2.ListNotes) {
-				if (!Note.getText().equals("סודה אישי")) {
-					func.CompareValue(test2, "6", " ChangeMealDetail ", Note.getText(), "סודה אישי"); 
-				}else {
-					func.CompareValue(test2, "6", " ChangeMealDetail ", Note.getText(), "סודה אישי"); 
-					break;
+		try {
+			for (WebElement MealChange : pom4.ListMealChange) {
+			Thread.sleep(1000);
+				if (MealChange.getAttribute("title").equals("עריכת המוצר ארוחת פרש נודלס קידס עוף")) {
+					MealChange.click();
 				}
 			}
+			Thread.sleep(1000);
+			pom4.Drink2.click();    //בחירת סודה אישית
+			pom4.AddToCart.click();
+			pom4.Drink2.getText();
+			Thread.sleep(1000);
+				for (WebElement Note : pom2.ListNotes) {
+					if (!Note.getText().equals("סודה אישי")) {
+						func.CompareValue(test2, "6", " ChangeMealDetail ", Note.getText(), "סודה אישי"); 
+					}else {
+						func.CompareValue(test2, "6", " ChangeMealDetail ", Note.getText(), "סודה אישי"); 
+						break;
+					}
+				}
 		} catch (Exception e) {
-			assertEquals("Change Meal Detail", "Expected Change Meal Detail");
+				assertEquals("Change Meal Detail", "Expected Change Meal Detail");
 		}
 	}
 	
-	@Test (enabled = false, priority = 6,
+	@Test (enabled = true, priority = 6,
 			dependsOnMethods = {"AddMeal_2Test"}) 
-	public void RemoveItemTest () throws InterruptedException { 
+	public static void RemoveItemTest () throws InterruptedException { 
 		// Test 7
 		int NoItems1 = pom4.ListRemoveItem.size();
+		Thread.sleep(2000);
 		pom4.ListRemoveItem.get(0).click();
 		pom4.btnRemoveItem.click();
 	    String StrNoItem =  Integer.toString(NoItems1-1);  //Numbers of items in list after remove
 		func.CompareValue(test2, "7", " RemoveItem ", StrNoItem , "1"); 
 	}
 	
-	@Test (enabled = true, priority = 6,
+	@Test (enabled = true, priority = 7,
 			dependsOnMethods = {"AddMeal_2Test"}) 
-	public void CleanCartTest () throws InterruptedException { 
+	public static void CleanCartTest () throws InterruptedException { 
 		// Test 8
 		pom4.btnCleanCart.click();
-		pom4.btnRemoveItem.click();
-		
-		String [] PriceSplit = pom4.IntermediatePrice.get(0).getText().split("₪");
-
-		System.out.println(PriceSplit[0]);
-
-		func.CompareValue(test2, "8", " RemoveItem ", "1" , "1"); 
+		pom4.btnRemoveItem.click();		
+		String [] splitPrice = pom4.IntermediatePrice.getText().split("\n");
+		func.CompareValue(test2, "8", " RemoveItem ", splitPrice[0] , "0"); 
 	}
 	
 }

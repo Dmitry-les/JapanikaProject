@@ -47,7 +47,7 @@ public class idAddMeal {
 	@FindBy (xpath = "//a[@class='clean_cart siteBtn']")
 	public static WebElement btnCleanCart;
 	
-	@FindBy (xpath = "//div[@class='total-row']/strong")
-	public static List<WebElement> IntermediatePrice;
+	@FindBy (xpath = "//*[@id=\"totals\"]/div[1]/strong/span")
+	public static WebElement IntermediatePrice;
 	
 }

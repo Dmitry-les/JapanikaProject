@@ -1,37 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="7" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="6" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-16T16:51:29 IDT" name="Default suite" finished-at="2021-10-16T16:51:57 IDT" duration-ms="27679">
+  <suite started-at="2021-10-18T21:34:26 IDT" name="Japanika Tests" finished-at="2021-10-18T21:34:59 IDT" duration-ms="33072">
     <groups>
     </groups>
-    <test started-at="2021-10-16T16:51:29 IDT" name="Default test" finished-at="2021-10-16T16:51:57 IDT" duration-ms="27679">
+    <test started-at="2021-10-18T21:34:26 IDT" name="Test4" finished-at="2021-10-18T21:34:59 IDT" duration-ms="33072">
       <class name="Tests.HomeDelivery">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Tests.HomeDelivery@31c88ec8]" started-at="2021-10-16T16:51:29 IDT" name="BeforeClass" finished-at="2021-10-16T16:51:36 IDT" duration-ms="7129" status="PASS">
+        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Tests.HomeDelivery@3daa422a]" started-at="2021-10-18T21:34:26 IDT" name="BeforeClass" finished-at="2021-10-18T21:34:32 IDT" duration-ms="5560" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method signature="CityValidTest()[pri:2, instance:Tests.HomeDelivery@31c88ec8]" started-at="2021-10-16T16:51:36 IDT" name="CityValidTest" finished-at="2021-10-16T16:51:48 IDT" duration-ms="12041" status="PASS">
+        <test-method signature="CityNotValidTest()[pri:1, instance:Tests.HomeDelivery@3daa422a]" started-at="2021-10-18T21:34:32 IDT" name="CityNotValidTest" finished-at="2021-10-18T21:34:32 IDT" duration-ms="494" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [2] but found [1]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [2] but found [1]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at Japanika.Functions.HomeDeliveryNotValid(Functions.java:38)
+at Tests.HomeDelivery.CityNotValidTest(HomeDelivery.java:66)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CityNotValidTest -->
+        <test-method signature="CityValidTest()[pri:2, instance:Tests.HomeDelivery@3daa422a]" started-at="2021-10-18T21:34:32 IDT" name="CityValidTest" finished-at="2021-10-18T21:34:44 IDT" duration-ms="11888" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CityValidTest -->
-        <test-method signature="AddMeal_1Test()[pri:3, instance:Tests.HomeDelivery@31c88ec8]" started-at="2021-10-16T16:51:48 IDT" name="AddMeal_1Test" finished-at="2021-10-16T16:51:52 IDT" depends-on-methods="Tests.HomeDelivery.CityValidTest" duration-ms="3856" status="PASS">
+        <test-method signature="AddMeal_1Test()[pri:3, instance:Tests.HomeDelivery@3daa422a]" started-at="2021-10-18T21:34:44 IDT" name="AddMeal_1Test" finished-at="2021-10-18T21:34:48 IDT" depends-on-methods="Tests.HomeDelivery.CityValidTest" duration-ms="3793" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddMeal_1Test -->
-        <test-method signature="AddMeal_2Test()[pri:4, instance:Tests.HomeDelivery@31c88ec8]" started-at="2021-10-16T16:51:52 IDT" name="AddMeal_2Test" finished-at="2021-10-16T16:51:55 IDT" depends-on-methods="Tests.HomeDelivery.AddMeal_1Test" duration-ms="2792" status="PASS">
+        <test-method signature="AddMeal_2Test()[pri:4, instance:Tests.HomeDelivery@3daa422a]" started-at="2021-10-18T21:34:48 IDT" name="AddMeal_2Test" finished-at="2021-10-18T21:34:51 IDT" depends-on-methods="Tests.HomeDelivery.AddMeal_1Test" duration-ms="2582" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddMeal_2Test -->
-        <test-method signature="CleanCartTest()[pri:6, instance:Tests.HomeDelivery@31c88ec8]" started-at="2021-10-16T16:51:55 IDT" name="CleanCartTest" finished-at="2021-10-16T16:51:55 IDT" depends-on-methods="Tests.HomeDelivery.AddMeal_2Test" duration-ms="258" status="PASS">
+        <test-method signature="ChangeMealDetailTest()[pri:5, instance:Tests.HomeDelivery@3daa422a]" started-at="2021-10-18T21:34:51 IDT" name="ChangeMealDetailTest" finished-at="2021-10-18T21:34:55 IDT" depends-on-methods="Tests.HomeDelivery.AddMeal_2Test" duration-ms="4657" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangeMealDetailTest -->
+        <test-method signature="RemoveItemTest()[pri:6, instance:Tests.HomeDelivery@3daa422a]" started-at="2021-10-18T21:34:55 IDT" name="RemoveItemTest" finished-at="2021-10-18T21:34:57 IDT" depends-on-methods="Tests.HomeDelivery.AddMeal_2Test" duration-ms="2266" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RemoveItemTest -->
+        <test-method signature="CleanCartTest()[pri:7, instance:Tests.HomeDelivery@3daa422a]" started-at="2021-10-18T21:34:57 IDT" name="CleanCartTest" finished-at="2021-10-18T21:34:58 IDT" depends-on-methods="Tests.HomeDelivery.AddMeal_2Test" duration-ms="248" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CleanCartTest -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:Tests.HomeDelivery@31c88ec8]" started-at="2021-10-16T16:51:55 IDT" name="afterClass" finished-at="2021-10-16T16:51:57 IDT" duration-ms="1526" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Tests.HomeDelivery@3daa422a]" started-at="2021-10-18T21:34:58 IDT" name="afterClass" finished-at="2021-10-18T21:34:59 IDT" duration-ms="1506" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- Tests.HomeDelivery -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test4 -->
+  </suite> <!-- Japanika Tests -->
 </testng-results>
