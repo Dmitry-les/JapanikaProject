@@ -10,6 +10,7 @@ import javax.swing.event.ListDataListener;
 import javax.xml.xpath.XPath;
 
 import org.apache.poi.hssf.record.PageBreakRecord.Break;
+import org.apache.poi.poifs.filesystem.POIFSMiniStore;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -51,14 +52,14 @@ public class HomeDelivery extends ABA {
 		test2 = Jap.createTest("HomeDeliveryTest", "HomeDelivery");
 	}
 	
-	@AfterClass (alwaysRun=true)
+	@AfterClass (alwaysRun = true)
 	public void afterClass() throws InterruptedException {
 		Thread.sleep(1000);
 		extent.flush();
 //		driver.quit();
 	}
 	
-	@Test (enabled= true, priority = 1) 
+	@Test (enabled = true, priority = 1) 
 	public static void CityNotValidTest(){
 		// Test 2
 		pom2.btnOrders.click();
@@ -66,7 +67,7 @@ public class HomeDelivery extends ABA {
 		func.HomeDeliveryNotValid(test2,"2"," CityNotValid ", "הקלד לפחות 2 תווים ונווט עם חיצי המקלדת");
 	}
 
-	@Test (enabled= true, priority = 2) 
+	@Test (enabled = true, priority = 2) 
 	public static void CityValidTest() throws InterruptedException{
 		// Test 3
 		driver.get("https://www.japanika.net/");
@@ -78,30 +79,25 @@ public class HomeDelivery extends ABA {
 		pom2.InputField.sendKeys("קו");   // רחוב
 		Thread.sleep(2000);
 		pom2.Street.get(0).click();
-	
 		pom2.HouseNumber.sendKeys("5");   // בית מספר
 		pom2.Approve.click();
 		Thread.sleep(3000);
 		func.CompareValue(test2,"3", " CityValid ", pom2.Category.get(0).getText() , "יש לי קופון");
 	}
 	
-	@Test (enabled= true, priority = 3,
-			dependsOnMethods = {"CityValidTest"}, alwaysRun = true) 
+	@Test (enabled = true, priority = 3, dependsOnMethods = {"CityValidTest"}) 
 	public static void AddMeal_1Test () throws InterruptedException { 
 		// Test 4
-//		pom4.Close.get(4);
 		pom4.Category.get(6).click();
 		pom4.Meal1.click();
 		pom4.Drink1.click();
 		pom4.AddToCart.click();
 		Thread.sleep(3000);
 		func.CompareValue(test2,"4"," AddMeal_1 ", pom4.ChosenMeal.get(0).getText(), pom4.Meal1.getText());  
-//		func.CompareValue(test2," AddMeal_1Test ", "jhj", pom4.Meal1.getText());  
 
 	  }
 	
-	@Test (enabled = true, priority = 4,
-			dependsOnMethods = {"AddMeal_1Test"}) 
+	@Test (enabled = true, priority = 4, dependsOnMethods = {"AddMeal_1Test"}) 
 	public static void AddMeal_2Test () throws InterruptedException { 
 		// Test 5
 		pom4.Category.get(2).click();
@@ -112,8 +108,7 @@ public class HomeDelivery extends ABA {
 		func.CompareValue(test2,"5", " AddMeal_2 ", pom4.ChosenMeal.get(0).getText(), pom4.Meal2.getText());  
 	  }
 
-	@Test (enabled = true, priority = 5,
-			dependsOnMethods = {"AddMeal_2Test"}) 
+	@Test (enabled = true, priority = 5, dependsOnMethods = {"AddMeal_2Test"}) 
 	public static void ChangeMealDetailTest () throws InterruptedException { 
 		// Test 6
 		try {
@@ -141,8 +136,7 @@ public class HomeDelivery extends ABA {
 		}
 	}
 	
-	@Test (enabled = true, priority = 6,
-			dependsOnMethods = {"AddMeal_2Test"}) 
+	@Test (enabled = true, priority = 6, dependsOnMethods = {"AddMeal_2Test"}) 
 	public static void RemoveItemTest () throws InterruptedException { 
 		// Test 7
 		int NoItems1 = pom4.ListRemoveItem.size();
@@ -153,8 +147,7 @@ public class HomeDelivery extends ABA {
 		func.CompareValue(test2, "7", " RemoveItem ", StrNoItem , "1"); 
 	}
 	
-	@Test (enabled = true, priority = 7,
-			dependsOnMethods = {"AddMeal_2Test"}) 
+	@Test (enabled = true, priority = 7, dependsOnMethods = {"AddMeal_2Test"}) 
 	public static void CleanCartTest () throws InterruptedException { 
 		// Test 8
 		pom4.btnCleanCart.click();
@@ -163,6 +156,20 @@ public class HomeDelivery extends ABA {
 		func.CompareValue(test2, "8", " CleanCart ", splitPrice[0] , "0"); 
 	}
 	
+	@Test (enabled = true, priority = 8, dependsOnMethods = {"CleanCartTest"}) 
+	public static void MinimumOrder () throws InterruptedException { 
+		// Test 9
+		pom4.Category.get(3).click();
+		pom4.Meal3.click();
+		pom4.NoTofu.get(1).click();
+		pom4.AddToCart.click();
+		Thread.sleep(2000);		
+		do {
+			pom4.ListAddItem.get(0).click();
+			pom4.btnToPay.click();
+		} while (pom4.AllertShow.isDisplayed());
+		func.CompareValue(test2, "9", " MinimumOrderTest ", pom4.Payment.getText() , "תשלום וסיום הזמנה"); 
+	}
 }
 
 
