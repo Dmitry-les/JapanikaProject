@@ -1,5 +1,7 @@
 package Tests;
 
+import java.awt.AWTException;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -40,7 +42,7 @@ public class ChatOnLine extends ABA {
 	}
 	
 	@Test
-	public static void ChatOnLineTest(){
+	public static void ChatOnLineTest() throws AWTException, IOException{
 		pom1.BtnChatOnLine.click();   // יכשל טסט 
 //		pom1.BtnChat.click();         // יצליח טסט
 		func.IdentifyChat(test1, "1", " ChatOnLine ");

@@ -3,6 +3,8 @@ package Tests;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.fail;
 
+import java.awt.AWTException;
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -60,7 +62,7 @@ public class HomeDelivery extends ABA {
 	}
 	
 	@Test (enabled = true, priority = 1) 
-	public static void CityNotValidTest(){
+	public static void CityNotValidTest() throws AWTException, IOException{
 		// Test 2
 		pom2.btnOrders.click();
 		pom2.CityField.click();
@@ -68,7 +70,7 @@ public class HomeDelivery extends ABA {
 	}
 
 	@Test (enabled = true, priority = 2) 
-	public static void CityValidTest() throws InterruptedException{
+	public static void CityValidTest() throws InterruptedException, AWTException, IOException{
 		// Test 3
 		driver.get("https://www.japanika.net/");
 		pom2.btnOrders.click();
@@ -86,7 +88,7 @@ public class HomeDelivery extends ABA {
 	}
 	
 	@Test (enabled = true, priority = 3, dependsOnMethods = {"CityValidTest"}) 
-	public static void AddMeal_1Test () throws InterruptedException { 
+	public static void AddMeal_1Test () throws InterruptedException, AWTException, IOException { 
 		// Test 4
 		pom4.Category.get(6).click();
 		pom4.Meal1.click();
@@ -98,7 +100,7 @@ public class HomeDelivery extends ABA {
 	  }
 	
 	@Test (enabled = true, priority = 4, dependsOnMethods = {"AddMeal_1Test"}) 
-	public static void AddMeal_2Test () throws InterruptedException { 
+	public static void AddMeal_2Test () throws InterruptedException, AWTException, IOException { 
 		// Test 5
 		pom4.Category.get(2).click();
 		pom4.Meal2.click();
@@ -137,7 +139,7 @@ public class HomeDelivery extends ABA {
 	}
 	
 	@Test (enabled = true, priority = 6, dependsOnMethods = {"AddMeal_2Test"}) 
-	public static void RemoveItemTest () throws InterruptedException { 
+	public static void RemoveItemTest () throws InterruptedException, AWTException, IOException { 
 		// Test 7
 		int NoItems1 = pom4.ListRemoveItem.size();
 		Thread.sleep(2000);
@@ -148,7 +150,7 @@ public class HomeDelivery extends ABA {
 	}
 	
 	@Test (enabled = true, priority = 7, dependsOnMethods = {"AddMeal_2Test"}) 
-	public static void CleanCartTest () throws InterruptedException { 
+	public static void CleanCartTest () throws InterruptedException, AWTException, IOException { 
 		// Test 8
 		pom4.btnCleanCart.click();
 		pom4.btnRemoveItem.click();		
@@ -157,7 +159,7 @@ public class HomeDelivery extends ABA {
 	}
 	
 	@Test (enabled = true, priority = 8, dependsOnMethods = {"CleanCartTest"}) 
-	public static void MinimumOrder () throws InterruptedException { 
+	public static void MinimumOrder () throws InterruptedException, AWTException, IOException { 
 		// Test 9
 		pom4.Category.get(3).click();
 		pom4.Meal3.click();

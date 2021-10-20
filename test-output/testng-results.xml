@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="9" passed="7" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-20T22:56:04 IDT" name="Testing Japanika" finished-at="2021-10-20T22:57:00 IDT" duration-ms="55581">
+  <suite started-at="2021-10-20T23:20:56 IDT" name="Testing Japanika" finished-at="2021-10-20T23:21:53 IDT" duration-ms="57046">
     <groups>
     </groups>
-    <test started-at="2021-10-20T22:56:04 IDT" name="Test1" finished-at="2021-10-20T22:56:23 IDT" duration-ms="18592">
+    <test started-at="2021-10-20T23:20:56 IDT" name="Test1" finished-at="2021-10-20T23:21:16 IDT" duration-ms="19815">
       <class name="Tests.ChatOnLine">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Tests.ChatOnLine@41e36e46]" started-at="2021-10-20T22:56:04 IDT" name="beforeClass" finished-at="2021-10-20T22:56:10 IDT" duration-ms="5470" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Tests.ChatOnLine@41e36e46]" started-at="2021-10-20T23:20:56 IDT" name="beforeClass" finished-at="2021-10-20T23:21:01 IDT" duration-ms="5526" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="ChatOnLineTest()[pri:0, instance:Tests.ChatOnLine@41e36e46]" started-at="2021-10-20T22:56:10 IDT" name="ChatOnLineTest" finished-at="2021-10-20T22:56:21 IDT" duration-ms="11151" status="FAIL">
+        <test-method signature="ChatOnLineTest()[pri:0, instance:Tests.ChatOnLine@41e36e46]" started-at="2021-10-20T23:21:02 IDT" name="ChatOnLineTest" finished-at="2021-10-20T23:21:14 IDT" duration-ms="12176" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [2] but found [1]]]>
@@ -24,8 +24,8 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 at org.testng.Assert.assertEquals(Assert.java:122)
 at org.testng.Assert.assertEquals(Assert.java:629)
 at org.testng.Assert.assertEquals(Assert.java:639)
-at Japanika.Functions.IdentifyChat(Functions.java:21)
-at Tests.ChatOnLine.ChatOnLineTest(ChatOnLine.java:46)
+at Japanika.Functions.IdentifyChat(Functions.java:26)
+at Tests.ChatOnLine.ChatOnLineTest(ChatOnLine.java:48)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -60,19 +60,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ChatOnLineTest -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:Tests.ChatOnLine@41e36e46]" started-at="2021-10-20T22:56:21 IDT" name="afterClass" finished-at="2021-10-20T22:56:23 IDT" duration-ms="1911" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Tests.ChatOnLine@41e36e46]" started-at="2021-10-20T23:21:14 IDT" name="afterClass" finished-at="2021-10-20T23:21:16 IDT" duration-ms="2049" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- Tests.ChatOnLine -->
     </test> <!-- Test1 -->
-    <test started-at="2021-10-20T22:56:23 IDT" name="Test2-Test9" finished-at="2021-10-20T22:57:00 IDT" duration-ms="36939">
+    <test started-at="2021-10-20T23:21:16 IDT" name="Test2-Test9" finished-at="2021-10-20T23:21:53 IDT" duration-ms="37188">
       <class name="Tests.HomeDelivery">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Tests.HomeDelivery@8dbdac1]" started-at="2021-10-20T22:56:23 IDT" name="BeforeClass" finished-at="2021-10-20T22:56:27 IDT" duration-ms="4078" status="PASS">
+        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Tests.HomeDelivery@8dbdac1]" started-at="2021-10-20T23:21:16 IDT" name="BeforeClass" finished-at="2021-10-20T23:21:20 IDT" duration-ms="4141" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method signature="CityNotValidTest()[pri:1, instance:Tests.HomeDelivery@8dbdac1]" started-at="2021-10-20T22:56:27 IDT" name="CityNotValidTest" finished-at="2021-10-20T22:56:28 IDT" duration-ms="745" status="FAIL">
+        <test-method signature="CityNotValidTest()[pri:1, instance:Tests.HomeDelivery@8dbdac1]" started-at="2021-10-20T23:21:20 IDT" name="CityNotValidTest" finished-at="2021-10-20T23:21:21 IDT" duration-ms="982" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [2] but found [1]]]>
@@ -85,8 +85,8 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 at org.testng.Assert.assertEquals(Assert.java:122)
 at org.testng.Assert.assertEquals(Assert.java:629)
 at org.testng.Assert.assertEquals(Assert.java:639)
-at Japanika.Functions.HomeDeliveryNotValid(Functions.java:36)
-at Tests.HomeDelivery.CityNotValidTest(HomeDelivery.java:67)
+at Japanika.Functions.HomeDeliveryNotValid(Functions.java:42)
+at Tests.HomeDelivery.CityNotValidTest(HomeDelivery.java:69)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -121,35 +121,35 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CityNotValidTest -->
-        <test-method signature="CityValidTest()[pri:2, instance:Tests.HomeDelivery@8dbdac1]" started-at="2021-10-20T22:56:28 IDT" name="CityValidTest" finished-at="2021-10-20T22:56:39 IDT" duration-ms="11579" status="PASS">
+        <test-method signature="CityValidTest()[pri:2, instance:Tests.HomeDelivery@8dbdac1]" started-at="2021-10-20T23:21:21 IDT" name="CityValidTest" finished-at="2021-10-20T23:21:33 IDT" duration-ms="12139" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CityValidTest -->
-        <test-method signature="AddMeal_1Test()[pri:3, instance:Tests.HomeDelivery@8dbdac1]" started-at="2021-10-20T22:56:39 IDT" name="AddMeal_1Test" finished-at="2021-10-20T22:56:44 IDT" depends-on-methods="Tests.HomeDelivery.CityValidTest" duration-ms="4323" status="PASS">
+        <test-method signature="AddMeal_1Test()[pri:3, instance:Tests.HomeDelivery@8dbdac1]" started-at="2021-10-20T23:21:33 IDT" name="AddMeal_1Test" finished-at="2021-10-20T23:21:37 IDT" depends-on-methods="Tests.HomeDelivery.CityValidTest" duration-ms="4204" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddMeal_1Test -->
-        <test-method signature="AddMeal_2Test()[pri:4, instance:Tests.HomeDelivery@8dbdac1]" started-at="2021-10-20T22:56:44 IDT" name="AddMeal_2Test" finished-at="2021-10-20T22:56:46 IDT" depends-on-methods="Tests.HomeDelivery.AddMeal_1Test" duration-ms="2634" status="PASS">
+        <test-method signature="AddMeal_2Test()[pri:4, instance:Tests.HomeDelivery@8dbdac1]" started-at="2021-10-20T23:21:37 IDT" name="AddMeal_2Test" finished-at="2021-10-20T23:21:40 IDT" depends-on-methods="Tests.HomeDelivery.AddMeal_1Test" duration-ms="2600" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddMeal_2Test -->
-        <test-method signature="ChangeMealDetailTest()[pri:5, instance:Tests.HomeDelivery@8dbdac1]" started-at="2021-10-20T22:56:46 IDT" name="ChangeMealDetailTest" finished-at="2021-10-20T22:56:51 IDT" depends-on-methods="Tests.HomeDelivery.AddMeal_2Test" duration-ms="4660" status="PASS">
+        <test-method signature="ChangeMealDetailTest()[pri:5, instance:Tests.HomeDelivery@8dbdac1]" started-at="2021-10-20T23:21:40 IDT" name="ChangeMealDetailTest" finished-at="2021-10-20T23:21:44 IDT" depends-on-methods="Tests.HomeDelivery.AddMeal_2Test" duration-ms="4594" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ChangeMealDetailTest -->
-        <test-method signature="RemoveItemTest()[pri:6, instance:Tests.HomeDelivery@8dbdac1]" started-at="2021-10-20T22:56:51 IDT" name="RemoveItemTest" finished-at="2021-10-20T22:56:53 IDT" depends-on-methods="Tests.HomeDelivery.AddMeal_2Test" duration-ms="2291" status="PASS">
+        <test-method signature="RemoveItemTest()[pri:6, instance:Tests.HomeDelivery@8dbdac1]" started-at="2021-10-20T23:21:44 IDT" name="RemoveItemTest" finished-at="2021-10-20T23:21:47 IDT" depends-on-methods="Tests.HomeDelivery.AddMeal_2Test" duration-ms="2314" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RemoveItemTest -->
-        <test-method signature="CleanCartTest()[pri:7, instance:Tests.HomeDelivery@8dbdac1]" started-at="2021-10-20T22:56:53 IDT" name="CleanCartTest" finished-at="2021-10-20T22:56:53 IDT" depends-on-methods="Tests.HomeDelivery.AddMeal_2Test" duration-ms="272" status="PASS">
+        <test-method signature="CleanCartTest()[pri:7, instance:Tests.HomeDelivery@8dbdac1]" started-at="2021-10-20T23:21:47 IDT" name="CleanCartTest" finished-at="2021-10-20T23:21:47 IDT" depends-on-methods="Tests.HomeDelivery.AddMeal_2Test" duration-ms="249" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CleanCartTest -->
-        <test-method signature="MinimumOrder()[pri:8, instance:Tests.HomeDelivery@8dbdac1]" started-at="2021-10-20T22:56:53 IDT" name="MinimumOrder" finished-at="2021-10-20T22:56:59 IDT" depends-on-methods="Tests.HomeDelivery.CleanCartTest" duration-ms="5255" status="PASS">
+        <test-method signature="MinimumOrder()[pri:8, instance:Tests.HomeDelivery@8dbdac1]" started-at="2021-10-20T23:21:47 IDT" name="MinimumOrder" finished-at="2021-10-20T23:21:52 IDT" depends-on-methods="Tests.HomeDelivery.CleanCartTest" duration-ms="4862" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MinimumOrder -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:Tests.HomeDelivery@8dbdac1]" started-at="2021-10-20T22:56:59 IDT" name="afterClass" finished-at="2021-10-20T22:57:00 IDT" duration-ms="1071" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Tests.HomeDelivery@8dbdac1]" started-at="2021-10-20T23:21:52 IDT" name="afterClass" finished-at="2021-10-20T23:21:53 IDT" duration-ms="1070" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
