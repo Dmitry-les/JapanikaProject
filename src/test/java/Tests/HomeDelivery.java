@@ -37,7 +37,7 @@ public class HomeDelivery extends ABA {
 	@BeforeClass
 	public void BeforeClass() {
 		  
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\User\\Desktop\\Dima//chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\User\\Desktop\\Dima\\Japanika//chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		
@@ -58,7 +58,7 @@ public class HomeDelivery extends ABA {
 	public void afterClass() throws InterruptedException {
 		Thread.sleep(1000);
 		extent.flush();
-//		driver.quit();
+		driver.quit();
 	}
 	
 	@Test (enabled = true, priority = 1) 

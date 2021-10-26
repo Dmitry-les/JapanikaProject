@@ -20,7 +20,7 @@ public class ChatOnLine extends ABA {
 	@BeforeClass
 	public static void beforeClass() {
 		  
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\User\\Desktop\\Dima//chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\User\\Desktop\\Dima\\Japanika//chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		

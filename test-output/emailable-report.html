@@ -8,30 +8,55 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Testing Japanika</th></tr>
-<tr><td><a href="#t0">Test1</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">19,815</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Test2-Test9</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">37,188</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">7</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">57,003</th><th colspan="2"></th></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">38,879</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Testing Japanika</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test1 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Tests.ChatOnLine</td><td><a href="#m0">ChatOnLineTest</a></td><td rowspan="1">1634761262022</td><td rowspan="1">12176</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Test2-Test9 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Tests.HomeDelivery</td><td><a href="#m1">CityNotValidTest</a></td><td rowspan="1">1634761280450</td><td rowspan="1">982</td></tr><tr><th colspan="4">Test2-Test9 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">Tests.HomeDelivery</td><td><a href="#m2">AddMeal_1Test</a></td><td rowspan="1">1634761293582</td><td rowspan="1">4204</td></tr><tr class="passedeven"><td><a href="#m3">AddMeal_2Test</a></td><td rowspan="1">1634761297788</td><td rowspan="1">2600</td></tr><tr class="passedeven"><td><a href="#m4">ChangeMealDetailTest</a></td><td rowspan="1">1634761300389</td><td rowspan="1">4594</td></tr><tr class="passedeven"><td><a href="#m5">CityValidTest</a></td><td rowspan="1">1634761281435</td><td rowspan="1">12139</td></tr><tr class="passedeven"><td><a href="#m6">CleanCartTest</a></td><td rowspan="1">1634761307302</td><td rowspan="1">249</td></tr><tr class="passedeven"><td><a href="#m7">MinimumOrder</a></td><td rowspan="1">1634761307553</td><td rowspan="1">4862</td></tr><tr class="passedeven"><td><a href="#m8">RemoveItemTest</a></td><td rowspan="1">1634761304986</td><td rowspan="1">2314</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Tests.HomeDelivery</td><td><a href="#m0">CityNotValidTest</a></td><td rowspan="1">1635270911061</td><td rowspan="1">919</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">Tests.HomeDelivery</td><td><a href="#m1">AddMeal_1Test</a></td><td rowspan="1">1635270923899</td><td rowspan="1">4027</td></tr><tr class="passedeven"><td><a href="#m2">AddMeal_2Test</a></td><td rowspan="1">1635270927928</td><td rowspan="1">2636</td></tr><tr class="passedeven"><td><a href="#m3">ChangeMealDetailTest</a></td><td rowspan="1">1635270930565</td><td rowspan="1">4546</td></tr><tr class="passedeven"><td><a href="#m4">CityValidTest</a></td><td rowspan="1">1635270911988</td><td rowspan="1">11906</td></tr><tr class="passedeven"><td><a href="#m5">CleanCartTest</a></td><td rowspan="1">1635270937415</td><td rowspan="1">234</td></tr><tr class="passedeven"><td><a href="#m6">MinimumOrder</a></td><td rowspan="1">1635270937651</td><td rowspan="1">4979</td></tr><tr class="passedeven"><td><a href="#m7">RemoveItemTest</a></td><td rowspan="1">1635270935113</td><td rowspan="1">2299</td></tr></tbody>
 </table>
-<h2>Test1</h2><h3 id="m0">Tests.ChatOnLine#ChatOnLineTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [2] but found [1]
-	at Japanika.Functions.IdentifyChat(Functions.java:26)
-	at Tests.ChatOnLine.ChatOnLineTest(ChatOnLine.java:48)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Test2-Test9</h2><h3 id="m1">Tests.HomeDelivery#CityNotValidTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [2] but found [1]
+<h2>Default test</h2><h3 id="m0">Tests.HomeDelivery#CityNotValidTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [2] but found [1]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
 	at Japanika.Functions.HomeDeliveryNotValid(Functions.java:42)
 	at Tests.HomeDelivery.CityNotValidTest(HomeDelivery.java:69)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">Tests.HomeDelivery#AddMeal_1Test</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">Tests.HomeDelivery#AddMeal_2Test</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">Tests.HomeDelivery#ChangeMealDetailTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">Tests.HomeDelivery#CityValidTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">Tests.HomeDelivery#CleanCartTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">Tests.HomeDelivery#MinimumOrder</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">Tests.HomeDelivery#RemoveItemTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Tests.HomeDelivery#AddMeal_1Test</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">Tests.HomeDelivery#AddMeal_2Test</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">Tests.HomeDelivery#ChangeMealDetailTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">Tests.HomeDelivery#CityValidTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">Tests.HomeDelivery#CleanCartTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">Tests.HomeDelivery#MinimumOrder</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">Tests.HomeDelivery#RemoveItemTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
