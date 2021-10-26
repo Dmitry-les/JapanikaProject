@@ -35,10 +35,10 @@ public class ExtentManager {
 	static DateFormat df = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
 	static Date today = Calendar.getInstance().getTime(); 
 	static String reportDate = df.format(today);
-	public static String filePath = "C:\\Users\\User\\Desktop\\Dima\\Japanika\\TestReport\\JapanikaProject " +reportDate+ "\\exReport.html";
+	public static String filePath = "C:\\Users\\User\\eclipse-workspace\\Japanika\\TestReport\\JapanikaProject " +reportDate+ "\\exReport.html";
 		
 	public static ExtentReports GetExtent(){
-		new File("C:\\Users\\User\\Desktop\\Dima\\Japanika\\TestReport\\JapanikaProject "+ reportDate).mkdirs();
+		new File("C:\\Users\\User\\eclipse-workspace\\Japanika\\TestReport\\JapanikaProject "+ reportDate).mkdirs();
 		if (extent != null)
             return extent; //avoid creating new instance of html file
             extent = new ExtentReports();		
@@ -68,7 +68,7 @@ public class ExtentManager {
 	{
 		LocalDateTime now = LocalDateTime.now();
 		String time =now.format(DateTimeFormatter.ofPattern("ddHHmmss", Locale.ENGLISH)); 		
-		String folderPath = ("C:\\Users\\User\\Desktop\\Dima\\Japanika\\TestReport\\JapanikaProject " + reportDate);
+		String folderPath = ("C:\\Users\\User\\eclipse-workspace\\Japanika\\TestReport\\JapanikaProject " + reportDate);
 		String imagePath   = folderPath  +"/pic" +time +".jpg"; 
 		
 		TakesScreenshot oScn = (TakesScreenshot) driver;

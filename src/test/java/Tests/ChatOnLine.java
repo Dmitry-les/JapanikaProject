@@ -4,6 +4,7 @@ import java.awt.AWTException;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
@@ -14,14 +15,16 @@ import org.testng.annotations.Test;
 
 import Identification.idChat;
 import Japanika.ABA;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class ChatOnLine extends ABA {
 	
 	@BeforeClass
 	public static void beforeClass() {
-		  
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\User\\Desktop\\Dima\\Japanika//chromedriver.exe");
-		driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+//		System.setProperty("webdriver.chrome.driver","C:\\Users\\User\\Desktop\\Dima\\Japanika//chromedriver.exe");
+//		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		
 		driver.get("https://www.japanika.net/");
@@ -38,7 +41,7 @@ public class ChatOnLine extends ABA {
 	public static void afterClass() throws InterruptedException {
 		Thread.sleep(1000);
 		extent.flush();
-		driver.quit();
+//		driver.quit();
 	}
 	
 	@Test
