@@ -23,9 +23,6 @@ public class ChatOnLine extends ABA {
 	public static void beforeClass() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-		
-//		System.setProperty("webdriver.chrome.driver","C:\\Users\\User\\Desktop\\Dima\\Japanika//chromedriver.exe");
-//		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		
 		driver.get("https://www.japanika.net/");
@@ -42,7 +39,7 @@ public class ChatOnLine extends ABA {
 	public static void afterClass() throws InterruptedException {
 		Thread.sleep(1000);
 		extent.flush();
-//		driver.quit();
+		driver.quit();
 	}
 	
 	@Test

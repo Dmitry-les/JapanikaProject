@@ -30,14 +30,14 @@ import Identification.idAddMeal;
 import Identification.idChat;
 import Identification.idHomeDelivery;
 import Japanika.ABA;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import net.bytebuddy.agent.builder.AgentBuilder.InitializationStrategy.SelfInjection.Split;
 
 public class HomeDelivery extends ABA {
 
 	@BeforeClass
 	public void BeforeClass() {
-		  
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\User\\Desktop\\Dima\\Japanika//chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		
