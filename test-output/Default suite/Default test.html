@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Oct 26 21:19:15 IDT 2021</td>
+<td>Started on:</td><td>Wed Oct 27 20:38:16 IDT 2021</td>
 </tr>
-<tr><td>Total time:</td><td>18 seconds (18655 ms)</td>
+<tr><td>Total time:</td><td>19 seconds (19734 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,10 +76,15 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='Tests.ChatOnLine.ChatOnLineTest()'><b>ChatOnLineTest</b><br>Test class: Tests.ChatOnLine</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;oScn&quot; is null
-	at Japanika.ExtentManager.CaptureScreen(ExtentManager.java:75)
-	at Japanika.Functions.IdentifyChat(Functions.java:24)
-	at Tests.ChatOnLine.ChatOnLineTest(ChatOnLine.java:51)
+<td><div><pre>java.lang.AssertionError: expected [2] but found [1]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at Japanika.Functions.IdentifyChat(Functions.java:26)
+	at Tests.ChatOnLine.ChatOnLineTest(ChatOnLine.java:52)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -108,11 +113,16 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace62309924", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace62309924'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;oScn&quot; is null
-	at Japanika.ExtentManager.CaptureScreen(ExtentManager.java:75)
-	at Japanika.Functions.IdentifyChat(Functions.java:24)
-	at Tests.ChatOnLine.ChatOnLineTest(ChatOnLine.java:51)
+</pre></div><a href='#' onClick='toggleBox("stack-trace337545117", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace337545117'><pre>java.lang.AssertionError: expected [2] but found [1]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at Japanika.Functions.IdentifyChat(Functions.java:26)
+	at Tests.ChatOnLine.ChatOnLineTest(ChatOnLine.java:52)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -142,7 +152,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>11</td>
+<td>12</td>
 <td>Tests.ChatOnLine@2c767a52</td></tr>
 </table><p>
 </body>
